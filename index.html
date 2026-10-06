@@ -9,162 +9,163 @@
 *{box-sizing:border-box;margin:0;padding:0}
 
 body{
-    min-height:100vh;
-    background:#050505;
-    color:#fff;
-    font-family:Arial,sans-serif;
-    padding:25px 15px;
+min-height:100vh;
+background:#050505;
+color:#fff;
+font-family:Arial,sans-serif;
+padding:25px 15px;
 }
 
 .container{
-    width:100%;
-    max-width:430px;
-    margin:auto;
-    text-align:center;
+width:100%;
+max-width:430px;
+margin:auto;
+text-align:center;
+}
+
+.top-photo,
+.bottom-photo{
+width:125px;
+height:125px;
+object-fit:cover;
+border-radius:50%;
+border:3px solid #ff2020;
+box-shadow:0 0 25px rgba(255,0,0,.35);
+display:block;
+margin-left:auto;
+margin-right:auto;
 }
 
 .top-photo{
-    width:125px;
-    height:125px;
-    object-fit:cover;
-    border-radius:50%;
-    border:3px solid #ff2020;
-    box-shadow:0 0 25px rgba(255,0,0,.35);
-    margin-bottom:18px;
-}
-
-.crown{
-    font-size:36px;
-    margin-bottom:2px;
-}
-
-.king{
-    color:#ff2020;
-    font-size:29px;
-    font-weight:800;
-    margin-bottom:8px;
-}
-
-.name{
-    font-size:21px;
-    font-weight:bold;
-    margin-bottom:22px;
-}
-
-.card{
-    background:#111;
-    border:1px solid #292929;
-    border-radius:18px;
-    padding:22px 18px;
-    margin:18px 0;
-    box-shadow:0 10px 30px rgba(0,0,0,.55);
-}
-
-.heading{
-    color:#ff2929;
-    font-size:20px;
-    font-weight:bold;
-    margin-bottom:12px;
-}
-
-.text{
-    color:#d0d0d0;
-    font-size:15px;
-    line-height:1.7;
-}
-
-.telegram-btn{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    background:#e50914;
-    color:#fff;
-    text-decoration:none;
-    padding:15px 13px;
-    border-radius:13px;
-    margin:20px 0;
-    font-size:16px;
-    font-weight:bold;
-    box-shadow:0 7px 20px rgba(229,9,20,.35);
-}
-
-.button-text{
-    flex:1;
-    text-align:center;
-}
-
-.telegram-icon{
-    width:23px;
-    height:23px;
-    background:#fff;
-    color:#e50914;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:13px;
-    animation:telegramDance 1.2s ease-in-out infinite;
-}
-
-@keyframes telegramDance{
-    0%,100%{transform:translateY(0)}
-    50%{transform:translateY(-5px)}
-}
-
-.count-title{
-    color:#ff3030;
-    font-size:17px;
-    font-weight:bold;
-    margin-bottom:15px;
-}
-
-.timer{
-    display:flex;
-    justify-content:center;
-    gap:9px;
-}
-
-.time-box{
-    background:#050505;
-    border:1px solid #333;
-    border-radius:10px;
-    padding:12px 8px;
-    min-width:72px;
-}
-
-.number{
-    font-size:24px;
-    font-weight:bold;
-}
-
-.label{
-    color:#888;
-    font-size:10px;
-    margin-top:4px;
+margin-bottom:18px;
 }
 
 .bottom-photo{
-    width:100%;
-    max-width:330px;
-    height:auto;
-    border-radius:18px;
-    border:2px solid #ff2020;
-    box-shadow:0 0 25px rgba(255,0,0,.25);
-    margin:25px auto 5px;
-    display:block;
+margin-top:25px;
+margin-bottom:5px;
+}
+
+.crown{
+font-size:36px;
+margin-bottom:2px;
+}
+
+.king{
+color:#ff2020;
+font-size:29px;
+font-weight:800;
+margin-bottom:8px;
+}
+
+.name{
+font-size:21px;
+font-weight:bold;
+margin-bottom:22px;
+}
+
+.card{
+background:#111;
+border:1px solid #292929;
+border-radius:18px;
+padding:22px 18px;
+margin:18px 0;
+box-shadow:0 10px 30px rgba(0,0,0,.55);
+}
+
+.heading{
+color:#ff2929;
+font-size:20px;
+font-weight:bold;
+margin-bottom:12px;
+}
+
+.text{
+color:#d0d0d0;
+font-size:15px;
+line-height:1.7;
+}
+
+.telegram-btn{
+display:flex;
+align-items:center;
+justify-content:space-between;
+background:#e50914;
+color:#fff;
+text-decoration:none;
+padding:15px 13px;
+border-radius:13px;
+margin:20px 0;
+font-size:16px;
+font-weight:bold;
+box-shadow:0 7px 20px rgba(229,9,20,.35);
+}
+
+.button-text{
+flex:1;
+text-align:center;
+}
+
+.telegram-icon{
+width:23px;
+height:23px;
+background:#fff;
+color:#e50914;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:13px;
+animation:telegramDance 1.2s ease-in-out infinite;
+}
+
+@keyframes telegramDance{
+0%,100%{transform:translateY(0)}
+50%{transform:translateY(-5px)}
+}
+
+.count-title{
+color:#ff3030;
+font-size:17px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+.timer{
+display:flex;
+justify-content:center;
+gap:9px;
+}
+
+.time-box{
+background:#050505;
+border:1px solid #333;
+border-radius:10px;
+padding:12px 8px;
+min-width:72px;
+}
+
+.number{
+font-size:24px;
+font-weight:bold;
+}
+
+.label{
+color:#888;
+font-size:10px;
+margin-top:4px;
 }
 
 .terms{
-    color:#777;
-    font-size:11px;
-    line-height:1.6;
-    margin-top:22px;
+color:#777;
+font-size:11px;
+line-height:1.6;
+margin-top:22px;
 }
 
 .footer{
-    color:#555;
-    font-size:11px;
-    margin-top:18px;
+color:#555;
+font-size:11px;
+margin-top:18px;
 }
 </style>
 </head>
@@ -184,12 +185,12 @@ body{
 <div class="card">
 
 <div class="heading">
-भरोसा • पारदर्शिता • प्रोफेशनल काम
+भरोसा • Genuine • प्रोफेशनल काम
 </div>
 
 <div class="text">
 यहाँ काम पूरी जानकारी और साफ communication के साथ किया जाता है।
-आगे बढ़ने से पहले सभी details और conditions ध्यान से समझें।
+ Telegram per hi ka message Abhi Karen 
 </div>
 
 </div>
@@ -247,11 +248,10 @@ Send Telegram Message Now
 
 <div class="terms">
 Terms & Conditions: आगे बढ़ने से पहले सभी details और conditions
-को ध्यान से समझें। कोई भी result guaranteed नहीं है और परिणाम
-अलग-अलग हो सकते हैं।
+को ध्यान से समझें। Baki bhai aapka pervinder hai na
 </div>
 
-<img src="newphoto.jpg" class="bottom-photo" alt="Parvinder Singh">
+<img src="kingphoto.jpg" class="bottom-photo" alt="Parvinder Singh">
 
 <div class="footer">
 © 2026 Parvinder Singh
@@ -261,35 +261,35 @@ Terms & Conditions: आगे बढ़ने से पहले सभी deta
 
 <script>
 
-let endTime = Date.now() + (6 * 60 * 60 * 1000);
+let endTime=Date.now()+(6*60*60*1000);
 
 function updateTimer(){
 
-let remaining = endTime - Date.now();
+let remaining=endTime-Date.now();
 
-if(remaining <= 0){
-remaining = 0;
+if(remaining<=0){
+remaining=0;
 }
 
-let hours = Math.floor(
-remaining / (1000 * 60 * 60)
+let hours=Math.floor(
+remaining/(1000*60*60)
 );
 
-let minutes = Math.floor(
-(remaining / (1000 * 60)) % 60
+let minutes=Math.floor(
+(remaining/(1000*60))%60
 );
 
-let seconds = Math.floor(
-(remaining / 1000) % 60
+let seconds=Math.floor(
+(remaining/1000)%60
 );
 
-document.getElementById("hours").textContent =
+document.getElementById("hours").textContent=
 String(hours).padStart(2,"0");
 
-document.getElementById("minutes").textContent =
+document.getElementById("minutes").textContent=
 String(minutes).padStart(2,"0");
 
-document.getElementById("seconds").textContent =
+document.getElementById("seconds").textContent=
 String(seconds).padStart(2,"0");
 
 }
