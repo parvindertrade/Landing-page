@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parvinder Singh | Expert</title>
+<title>SureShot King 👑 | Parvinder Singh</title>
 
 <style>
 * {
@@ -16,62 +16,75 @@
 body {
     min-height: 100vh;
     background: #050505;
-    color: #ffffff;
+    color: #fff;
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
     padding: 25px 15px;
 }
 
 .container {
     width: 100%;
     max-width: 430px;
+    margin: auto;
     text-align: center;
 }
 
-/* PROFILE PHOTO */
-.profile {
-    width: 125px;
-    height: 125px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ff2020;
-    box-shadow: 0 0 25px rgba(255,0,0,0.35);
+/* TOP PHOTOS */
+.photo-box {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
     margin-bottom: 18px;
 }
 
-h1 {
-    font-size: 28px;
+.photo {
+    width: 125px;
+    height: 125px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #ff2020;
+    box-shadow: 0 0 25px rgba(255,0,0,.35);
+}
+
+/* TITLE */
+.crown {
+    font-size: 38px;
+    margin-bottom: 3px;
+}
+
+.king {
+    color: #ff2020;
+    font-size: 29px;
+    font-weight: 800;
     margin-bottom: 8px;
 }
 
-.expert {
-    color: #ff2929;
-    font-size: 18px;
+.name {
+    font-size: 21px;
     font-weight: bold;
     margin-bottom: 22px;
 }
 
-/* INFORMATION CARD */
+/* MAIN CARD */
 .card {
-    background: #101010;
-    border: 1px solid #272727;
+    background: #111;
+    border: 1px solid #292929;
     border-radius: 18px;
     padding: 22px 18px;
-    margin-bottom: 20px;
-    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+    margin: 18px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,.55);
 }
 
-.title {
+.heading {
+    color: #ff2929;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
-.description {
-    color: #cfcfcf;
-    line-height: 1.6;
-    font-size: 14px;
+.text {
+    color: #d0d0d0;
+    font-size: 15px;
+    line-height: 1.7;
 }
 
 /* TELEGRAM BUTTON */
@@ -82,23 +95,23 @@ h1 {
     background: #e50914;
     color: white;
     text-decoration: none;
-    padding: 15px 16px;
-    border-radius: 12px;
+    padding: 15px;
+    border-radius: 13px;
+    margin: 20px 0;
     font-size: 16px;
     font-weight: bold;
-    margin: 20px 0;
-    box-shadow: 0 7px 20px rgba(229,9,20,0.30);
-    transition: 0.2s;
+    box-shadow: 0 7px 20px rgba(229,9,20,.35);
 }
 
-.telegram-btn:hover {
-    transform: scale(1.02);
+.button-text {
+    flex: 1;
+    text-align: center;
 }
 
-/* TELEGRAM ICON */
+/* ANIMATED ICON */
 .telegram-icon {
-    width: 28px;
-    height: 28px;
+    width: 29px;
+    height: 29px;
     background: white;
     color: #e50914;
     border-radius: 50%;
@@ -106,14 +119,11 @@ h1 {
     align-items: center;
     justify-content: center;
     font-size: 17px;
-    font-weight: bold;
-
-    /* HALKA UP-DOWN ANIMATION */
-    animation: telegramBounce 1.8s ease-in-out infinite;
+    animation: bounce 1.8s ease-in-out infinite;
 }
 
-@keyframes telegramBounce {
-    0%, 100% {
+@keyframes bounce {
+    0%,100% {
         transform: translateY(0);
     }
 
@@ -122,15 +132,10 @@ h1 {
     }
 }
 
-.button-text {
-    flex: 1;
-    text-align: center;
-}
-
 /* COUNTDOWN */
-.countdown-title {
+.count-title {
     color: #ff3030;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     margin-bottom: 15px;
 }
@@ -138,39 +143,38 @@ h1 {
 .timer {
     display: flex;
     justify-content: center;
-    gap: 10px;
+    gap: 9px;
 }
 
 .time-box {
     background: #050505;
-    border: 1px solid #333333;
+    border: 1px solid #333;
     border-radius: 10px;
-    padding: 12px 10px;
-    min-width: 70px;
+    padding: 12px 8px;
+    min-width: 72px;
 }
 
-.time-number {
+.number {
     font-size: 24px;
     font-weight: bold;
-    color: white;
 }
 
-.time-label {
+.label {
+    color: #888;
     font-size: 10px;
-    color: #999999;
     margin-top: 4px;
 }
 
 /* TERMS */
 .terms {
-    color: #777777;
+    color: #777;
     font-size: 11px;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-top: 22px;
 }
 
 .footer {
-    color: #555555;
+    color: #555;
     font-size: 11px;
     margin-top: 18px;
 }
@@ -181,31 +185,40 @@ h1 {
 
 <div class="container">
 
-    <!-- YOUR PHOTO -->
-    <img src="parvinder.jpg" class="profile" alt="Parvinder Singh">
-
-    <h1>Parvinder Singh</h1>
-
-    <div class="expert">
-        ⭐ Expert
+    <!-- TWO PHOTOS -->
+    <div class="photo-box">
+        <img src="parvinder.jpg" class="photo" alt="Parvinder Singh">
+        <img src="photo2.jpg" class="photo" alt="Parvinder Singh">
     </div>
 
-    <!-- MAIN CARD -->
+    <!-- NAME -->
+    <div class="crown">👑</div>
+
+    <div class="king">
+        SureShot King
+    </div>
+
+    <div class="name">
+        Singh Is King — Parvinder Singh
+    </div>
+
+    <!-- INTRO -->
     <div class="card">
 
-        <div class="title">
-            Genuine Work • Trust • Transparency
+        <div class="heading">
+            भरोसा • पारदर्शिता • प्रोफेशनल काम
         </div>
 
-        <div class="description">
-            Professional approach with clear communication.
-            Please understand all details and conditions before proceeding.
+        <div class="text">
+            यहाँ काम पूरी जानकारी और साफ communication
+            के साथ किया जाता है। आगे बढ़ने से पहले सभी
+            details और conditions ध्यान से समझें।
         </div>
 
     </div>
 
-    <!-- TOP TELEGRAM BUTTON -->
-    <a href="https://t.me/pb777jass" class="telegram-btn">
+    <!-- TELEGRAM BUTTON 1 -->
+    <a href="https://t.me/pb777jas" class="telegram-btn">
 
         <span class="telegram-icon">➤</span>
 
@@ -217,38 +230,36 @@ h1 {
 
     </a>
 
-
     <!-- COUNTDOWN -->
     <div class="card">
 
-        <div class="countdown-title">
+        <div class="count-title">
             ⏳ Limited Time
         </div>
 
         <div class="timer">
 
             <div class="time-box">
-                <div class="time-number" id="hours">06</div>
-                <div class="time-label">HOURS</div>
+                <div class="number" id="hours">06</div>
+                <div class="label">HOURS</div>
             </div>
 
             <div class="time-box">
-                <div class="time-number" id="minutes">00</div>
-                <div class="time-label">MINUTES</div>
+                <div class="number" id="minutes">00</div>
+                <div class="label">MINUTES</div>
             </div>
 
             <div class="time-box">
-                <div class="time-number" id="seconds">00</div>
-                <div class="time-label">SECONDS</div>
+                <div class="number" id="seconds">00</div>
+                <div class="label">SECONDS</div>
             </div>
 
         </div>
 
     </div>
 
-
-    <!-- BOTTOM TELEGRAM BUTTON -->
-    <a href="https://t.me/pb777jass" class="telegram-btn">
+    <!-- TELEGRAM BUTTON 2 -->
+    <a href="https://t.me/pb777jas" class="telegram-btn">
 
         <span class="telegram-icon">➤</span>
 
@@ -260,13 +271,12 @@ h1 {
 
     </a>
 
-
     <!-- TERMS -->
     <div class="terms">
 
-        Terms & Conditions: Please understand all details
-        and conditions before proceeding.
-        Results are not guaranteed and may vary.
+        Terms & Conditions: आगे बढ़ने से पहले सभी details
+        और conditions को ध्यान से समझें। कोई भी result
+        guaranteed नहीं है और परिणाम अलग-अलग हो सकते हैं।
 
     </div>
 
@@ -275,7 +285,6 @@ h1 {
     </div>
 
 </div>
-
 
 <script>
 
@@ -288,11 +297,9 @@ function updateTimer() {
     let remaining = endTime - Date.now();
 
     if (remaining <= 0) {
-
         document.getElementById("hours").innerText = "00";
         document.getElementById("minutes").innerText = "00";
         document.getElementById("seconds").innerText = "00";
-
         return;
     }
 
@@ -301,29 +308,4 @@ function updateTimer() {
     );
 
     let minutes = Math.floor(
-        (remaining / (1000 * 60)) % 60
-    );
-
-    let seconds = Math.floor(
-        (remaining / 1000) % 60
-    );
-
-
-    document.getElementById("hours").innerText =
-        String(hours).padStart(2, "0");
-
-    document.getElementById("minutes").innerText =
-        String(minutes).padStart(2, "0");
-
-    document.getElementById("seconds").innerText =
-        String(seconds).padStart(2, "0");
-}
-
-setInterval(updateTimer, 1000);
-
-updateTimer();
-
-</script>
-
-</body>
-</html>
+        (remaining / (1000 * 60)) % 
