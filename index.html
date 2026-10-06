@@ -4,103 +4,175 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parvinder Singh | SureShot Expert</title>
+<title>Parvinder Singh | Expert</title>
 
 <style>
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-  background: #f4f7fb;
-  color: #1f1f1f;
-  text-align: center;
+    min-height: 100vh;
+    background: #050505;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding: 25px 15px;
 }
 
 .container {
-  max-width: 500px;
-  margin: auto;
-  padding: 30px 18px 40px;
+    width: 100%;
+    max-width: 430px;
+    text-align: center;
 }
 
-/* YOUR PHOTO */
-.profile-photo {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid white;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.15);
-  margin-bottom: 15px;
+/* PROFILE PHOTO */
+.profile {
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff2020;
+    box-shadow: 0 0 25px rgba(255,0,0,0.35);
+    margin-bottom: 18px;
 }
 
 h1 {
-  font-size: 28px;
-  margin-bottom: 7px;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
 .expert {
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 22px;
+    color: #ff2929;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 22px;
 }
 
-.text-box {
-  background: white;
-  padding: 20px;
-  border-radius: 15px;
-  line-height: 1.6;
-  font-size: 16px;
-  box-shadow: 0 3px 14px rgba(0,0,0,0.08);
-  margin-bottom: 20px;
+/* INFORMATION CARD */
+.card {
+    background: #101010;
+    border: 1px solid #272727;
+    border-radius: 18px;
+    padding: 22px 18px;
+    margin-bottom: 20px;
+    box-shadow: 0 10px 35px rgba(0,0,0,0.5);
+}
+
+.title {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.description {
+    color: #cfcfcf;
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 /* TELEGRAM BUTTON */
 .telegram-btn {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 10px;
-  width: 100%;
-  background: #229ED9;
-  color: white;
-  text-decoration: none;
-  padding: 15px 18px;
-  border-radius: 11px;
-  font-size: 17px;
-  font-weight: bold;
-  margin: 18px 0 25px;
-  box-shadow: 0 4px 10px rgba(34,158,217,0.25);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #e50914;
+    color: white;
+    text-decoration: none;
+    padding: 15px 16px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 20px 0;
+    box-shadow: 0 7px 20px rgba(229,9,20,0.30);
+    transition: 0.2s;
 }
 
 .telegram-btn:hover {
-  opacity: 0.92;
+    transform: scale(1.02);
 }
 
-.telegram-logo {
-  width: 25px;
-  height: 25px;
-  flex-shrink: 0;
+/* TELEGRAM ICON */
+.telegram-icon {
+    width: 28px;
+    height: 28px;
+    background: white;
+    color: #e50914;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    font-weight: bold;
+
+    /* HALKA UP-DOWN ANIMATION */
+    animation: telegramBounce 1.8s ease-in-out infinite;
 }
 
-/* MIDDLE INFORMATION */
-.info {
-  background: white;
-  padding: 21px;
-  border-radius: 15px;
-  line-height: 1.7;
-  font-size: 16px;
-  box-shadow: 0 3px 14px rgba(0,0,0,0.08);
+@keyframes telegramBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-3px);
+    }
 }
 
+.button-text {
+    flex: 1;
+    text-align: center;
+}
+
+/* COUNTDOWN */
+.countdown-title {
+    color: #ff3030;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.time-box {
+    background: #050505;
+    border: 1px solid #333333;
+    border-radius: 10px;
+    padding: 12px 10px;
+    min-width: 70px;
+}
+
+.time-number {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.time-label {
+    font-size: 10px;
+    color: #999999;
+    margin-top: 4px;
+}
+
+/* TERMS */
 .terms {
-  margin-top: 25px;
-  font-size: 12px;
-  line-height: 1.5;
-  color: #666;
+    color: #777777;
+    font-size: 11px;
+    line-height: 1.5;
+    margin-top: 22px;
+}
+
+.footer {
+    color: #555555;
+    font-size: 11px;
+    margin-top: 18px;
 }
 </style>
 </head>
@@ -109,87 +181,149 @@ h1 {
 
 <div class="container">
 
-<!--
-PHOTO:
-Apni photo isi folder mein upload karo.
-Photo ka exact naam rakho: parvinder.jpg
-Agar PNG hai to parvinder.png kar dena.
--->
-<img src="parvinder.jpg" alt="Parvinder Singh" class="profile-photo">
+    <!-- YOUR PHOTO -->
+    <img src="parvinder.jpg" class="profile" alt="Parvinder Singh">
 
-<h1>Parvinder Singh</h1>
+    <h1>Parvinder Singh</h1>
 
-<div class="expert">
-⭐ SureShot Expert
+    <div class="expert">
+        ⭐ Expert
+    </div>
+
+    <!-- MAIN CARD -->
+    <div class="card">
+
+        <div class="title">
+            Genuine Work • Trust • Transparency
+        </div>
+
+        <div class="description">
+            Professional approach with clear communication.
+            Please understand all details and conditions before proceeding.
+        </div>
+
+    </div>
+
+    <!-- TOP TELEGRAM BUTTON -->
+    <a href="https://t.me/pb777jass" class="telegram-btn">
+
+        <span class="telegram-icon">➤</span>
+
+        <span class="button-text">
+            Send Telegram Message Now
+        </span>
+
+        <span class="telegram-icon">➤</span>
+
+    </a>
+
+
+    <!-- COUNTDOWN -->
+    <div class="card">
+
+        <div class="countdown-title">
+            ⏳ Limited Time
+        </div>
+
+        <div class="timer">
+
+            <div class="time-box">
+                <div class="time-number" id="hours">06</div>
+                <div class="time-label">HOURS</div>
+            </div>
+
+            <div class="time-box">
+                <div class="time-number" id="minutes">00</div>
+                <div class="time-label">MINUTES</div>
+            </div>
+
+            <div class="time-box">
+                <div class="time-number" id="seconds">00</div>
+                <div class="time-label">SECONDS</div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM TELEGRAM BUTTON -->
+    <a href="https://t.me/pb777jass" class="telegram-btn">
+
+        <span class="telegram-icon">➤</span>
+
+        <span class="button-text">
+            Send Telegram Message Now
+        </span>
+
+        <span class="telegram-icon">➤</span>
+
+    </a>
+
+
+    <!-- TERMS -->
+    <div class="terms">
+
+        Terms & Conditions: Please understand all details
+        and conditions before proceeding.
+        Results are not guaranteed and may vary.
+
+    </div>
+
+    <div class="footer">
+        © 2026 Parvinder Singh
+    </div>
+
 </div>
 
-<div class="text-box">
-<strong>Genuine Work • Trust • Transparency</strong>
-<br><br>
-Our work is handled with a professional and genuine approach.
-Clear information and direct communication are always our priority.
-</div>
+
+<script>
+
+/* 6 HOUR COUNTDOWN */
+
+let endTime = Date.now() + (6 * 60 * 60 * 1000);
+
+function updateTimer() {
+
+    let remaining = endTime - Date.now();
+
+    if (remaining <= 0) {
+
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+
+        return;
+    }
+
+    let hours = Math.floor(
+        remaining / (1000 * 60 * 60)
+    );
+
+    let minutes = Math.floor(
+        (remaining / (1000 * 60)) % 60
+    );
+
+    let seconds = Math.floor(
+        (remaining / 1000) % 60
+    );
 
 
-<!-- TOP TELEGRAM BUTTON -->
-<a href="https://t.me/pb777jass" class="telegram-btn">
+    document.getElementById("hours").innerText =
+        String(hours).padStart(2, "0");
 
-  <!-- LEFT TELEGRAM LOGO -->
-  <svg class="telegram-logo" viewBox="0 0 24 24" fill="white">
-    <path d="M21.9 3.2 18.6 20c-.3 1.2-1 1.5-2 1l-5.5-4.1-2.7 2.6c-.3.3-.5.5-1 .5l.4-5.6 10.2-9.2c.4-.4-.1-.6-.6-.2L5 12.7.1 11.2c-1.1-.3-1.1-1.1.2-1.6L20.1 2c.9-.3 2 .2 1.8 1.2z"/>
-  </svg>
+    document.getElementById("minutes").innerText =
+        String(minutes).padStart(2, "0");
 
-  <span>Send Telegram Message Now</span>
+    document.getElementById("seconds").innerText =
+        String(seconds).padStart(2, "0");
+}
 
-  <!-- RIGHT TELEGRAM LOGO -->
-  <svg class="telegram-logo" viewBox="0 0 24 24" fill="white">
-    <path d="M21.9 3.2 18.6 20c-.3 1.2-1 1.5-2 1l-5.5-4.1-2.7 2.6c-.3.3-.5.5-1 .5l.4-5.6 10.2-9.2c.4-.4-.1-.6-.6-.2L5 12.7.1 11.2c-1.1-.3-1.1-1.1.2-1.6L20.1 2c.9-.3 2 .2 1.8 1.2z"/>
-  </svg>
+setInterval(updateTimer, 1000);
 
-</a>
+updateTimer();
 
-
-<div class="info">
-
-<strong>Professional & Direct Communication</strong>
-
-<br><br>
-
-For complete information and details,
-contact me directly on Telegram.
-
-<br><br>
-
-All terms and details can be discussed clearly
-before proceeding.
-
-</div>
-
-
-<!-- BOTTOM TELEGRAM BUTTON -->
-<a href="https://t.me/pb777jass" class="telegram-btn">
-
-  <!-- LEFT TELEGRAM LOGO -->
-  <svg class="telegram-logo" viewBox="0 0 24 24" fill="white">
-    <path d="M21.9 3.2 18.6 20c-.3 1.2-1 1.5-2 1l-5.5-4.1-2.7 2.6c-.3.3-.5.5-1 .5l.4-5.6 10.2-9.2c.4-.4-.1-.6-.6-.2L5 12.7.1 11.2c-1.1-.3-1.1-1.1.2-1.6L20.1 2c.9-.3 2 .2 1.8 1.2z"/>
-  </svg>
-
-  <span>Send Telegram Message Now</span>
-
-  <!-- RIGHT TELEGRAM LOGO -->
-  <svg class="telegram-logo" viewBox="0 0 24 24" fill="white">
-    <path d="M21.9 3.2 18.6 20c-.3 1.2-1 1.5-2 1l-5.5-4.1-2.7 2.6c-.3.3-.5.5-1 .5l.4-5.6 10.2-9.2c.4-.4-.1-.6-.6-.2L5 12.7.1 11.2c-1.1-.3-1.1-1.1.2-1.6L20.1 2c.9-.3 2 .2 1.8 1.2z"/>
-  </svg>
-
-</a>
-
-
-<div class="terms">
-Terms & Conditions: Please understand all details and conditions
-before proceeding. Results are not guaranteed and may vary.
-</div>
-
-</div>
+</script>
 
 </body>
 </html>
