@@ -3,201 +3,168 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>SureShot King 👑 | Parvinder Singh</title>
 
 <style>
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+    min-height:100vh;
+    background:#050505;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    padding:25px 15px;
 }
 
-body {
-    min-height: 100vh;
-    background: #050505;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    padding: 25px 15px;
+.container{
+    width:100%;
+    max-width:430px;
+    margin:auto;
+    text-align:center;
 }
 
-.container {
-    width: 100%;
-    max-width: 430px;
-    margin: auto;
-    text-align: center;
+.top-photo{
+    width:125px;
+    height:125px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #ff2020;
+    box-shadow:0 0 25px rgba(255,0,0,.35);
+    margin-bottom:18px;
 }
 
-/* TOP PHOTO */
-.top-photo {
-    width: 125px;
-    height: 125px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 3px solid #ff2020;
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.35);
-    margin-bottom: 18px;
+.crown{
+    font-size:36px;
+    margin-bottom:2px;
 }
 
-/* TITLE */
-.crown {
-    font-size: 36px;
-    margin-bottom: 2px;
+.king{
+    color:#ff2020;
+    font-size:29px;
+    font-weight:800;
+    margin-bottom:8px;
 }
 
-.king {
-    color: #ff2020;
-    font-size: 29px;
-    font-weight: 800;
-    margin-bottom: 8px;
+.name{
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:22px;
 }
 
-.name {
-    font-size: 21px;
-    font-weight: bold;
-    margin-bottom: 22px;
+.card{
+    background:#111;
+    border:1px solid #292929;
+    border-radius:18px;
+    padding:22px 18px;
+    margin:18px 0;
+    box-shadow:0 10px 30px rgba(0,0,0,.55);
 }
 
-/* CARD */
-.card {
-    background: #111111;
-    border: 1px solid #292929;
-    border-radius: 18px;
-    padding: 22px 18px;
-    margin: 18px 0;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+.heading{
+    color:#ff2929;
+    font-size:20px;
+    font-weight:bold;
+    margin-bottom:12px;
 }
 
-.heading {
-    color: #ff2929;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 12px;
+.text{
+    color:#d0d0d0;
+    font-size:15px;
+    line-height:1.7;
 }
 
-.text {
-    color: #d0d0d0;
-    font-size: 15px;
-    line-height: 1.7;
+.telegram-btn{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#e50914;
+    color:#fff;
+    text-decoration:none;
+    padding:15px 13px;
+    border-radius:13px;
+    margin:20px 0;
+    font-size:16px;
+    font-weight:bold;
+    box-shadow:0 7px 20px rgba(229,9,20,.35);
 }
 
-/* TELEGRAM BUTTON */
-.telegram-btn {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: #e50914;
-    color: #ffffff;
-    text-decoration: none;
-
-    padding: 15px 13px;
-    border-radius: 13px;
-    margin: 20px 0;
-
-    font-size: 16px;
-    font-weight: bold;
-
-    box-shadow: 0 7px 20px rgba(229, 9, 20, 0.35);
+.button-text{
+    flex:1;
+    text-align:center;
 }
 
-.button-text {
-    flex: 1;
-    text-align: center;
+.telegram-icon{
+    width:23px;
+    height:23px;
+    background:#fff;
+    color:#e50914;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:13px;
+    animation:telegramDance 1.2s ease-in-out infinite;
 }
 
-/* SMALL TELEGRAM ICON */
-.telegram-icon {
-    width: 23px;
-    height: 23px;
-
-    background: #ffffff;
-    color: #e50914;
-
-    border-radius: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 13px;
-
-    animation: telegramDance 1.2s ease-in-out infinite;
+@keyframes telegramDance{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-5px)}
 }
 
-/* ICON ANIMATION */
-@keyframes telegramDance {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-5px);
-    }
+.count-title{
+    color:#ff3030;
+    font-size:17px;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
-/* COUNTDOWN */
-.count-title {
-    color: #ff3030;
-    font-size: 17px;
-    font-weight: bold;
-    margin-bottom: 15px;
+.timer{
+    display:flex;
+    justify-content:center;
+    gap:9px;
 }
 
-.timer {
-    display: flex;
-    justify-content: center;
-    gap: 9px;
+.time-box{
+    background:#050505;
+    border:1px solid #333;
+    border-radius:10px;
+    padding:12px 8px;
+    min-width:72px;
 }
 
-.time-box {
-    background: #050505;
-    border: 1px solid #333333;
-    border-radius: 10px;
-    padding: 12px 8px;
-    min-width: 72px;
+.number{
+    font-size:24px;
+    font-weight:bold;
 }
 
-.number {
-    font-size: 24px;
-    font-weight: bold;
+.label{
+    color:#888;
+    font-size:10px;
+    margin-top:4px;
 }
 
-.label {
-    color: #888888;
-    font-size: 10px;
-    margin-top: 4px;
+.bottom-photo{
+    width:100%;
+    max-width:330px;
+    height:auto;
+    border-radius:18px;
+    border:2px solid #ff2020;
+    box-shadow:0 0 25px rgba(255,0,0,.25);
+    margin:25px auto 5px;
+    display:block;
 }
 
-/* BOTTOM PHOTO */
-.bottom-photo {
-    width: 100%;
-    max-width: 330px;
-    height: auto;
-
-    border-radius: 18px;
-    border: 2px solid #ff2020;
-
-    box-shadow: 0 0 25px rgba(255, 0, 0, 0.25);
-
-    margin: 25px auto 5px;
-    display: block;
+.terms{
+    color:#777;
+    font-size:11px;
+    line-height:1.6;
+    margin-top:22px;
 }
 
-/* TERMS */
-.terms {
-    color: #777777;
-    font-size: 11px;
-    line-height: 1.6;
-    margin-top: 22px;
-}
-
-.footer {
-    color: #555555;
-    font-size: 11px;
-    margin-top: 18px;
+.footer{
+    color:#555;
+    font-size:11px;
+    margin-top:18px;
 }
 </style>
 </head>
@@ -206,222 +173,130 @@ body {
 
 <div class="container">
 
-    <!-- TOP PHOTO -->
-    <img
-        src="parvinder.jpg"
-        class="top-photo"
-        alt="Parvinder Singh"
-    >
+<img src="parvinder.jpg" class="top-photo" alt="Parvinder Singh">
 
-    <!-- TITLE -->
-    <div class="crown">👑</div>
+<div class="crown">👑</div>
 
-    <div class="king">
-        SureShot King
-    </div>
+<div class="king">SureShot King</div>
 
-    <div class="name">
-        Singh Is King — Parvinder Singh
-    </div>
+<div class="name">Singh Is King — Parvinder Singh</div>
 
+<div class="card">
 
-    <!-- TRUST CARD -->
-    <div class="card">
+<div class="heading">
+भरोसा • पारदर्शिता • प्रोफेशनल काम
+</div>
 
-        <div class="heading">
-            भरोसा • पारदर्शिता • प्रोफेशनल काम
-        </div>
-
-        <div class="text">
-            यहाँ काम पूरी जानकारी और साफ communication
-            के साथ किया जाता है। आगे बढ़ने से पहले सभी
-            details और conditions ध्यान से समझें।
-        </div>
-
-    </div>
-
-
-    <!-- TELEGRAM BUTTON 1 -->
-    <a
-        href="https://t.me/pb777jas"
-        class="telegram-btn"
-    >
-
-        <span class="telegram-icon">➤</span>
-
-        <span class="button-text">
-            Send Telegram Message Now
-        </span>
-
-        <span class="telegram-icon">➤</span>
-
-    </a>
-
-
-    <!-- COUNTDOWN -->
-    <div class="card">
-
-        <div class="count-title">
-            ⏳ Limited Time
-        </div>
-
-        <div class="timer">
-
-            <div class="time-box">
-
-                <div
-                    class="number"
-                    id="hours"
-                >
-                    06
-                </div>
-
-                <div class="label">
-                    HOURS
-                </div>
-
-            </div>
-
-
-            <div class="time-box">
-
-                <div
-                    class="number"
-                    id="minutes"
-                >
-                    00
-                </div>
-
-                <div class="label">
-                    MINUTES
-                </div>
-
-            </div>
-
-
-            <div class="time-box">
-
-                <div
-                    class="number"
-                    id="seconds"
-                >
-                    00
-                </div>
-
-                <div class="label">
-                    SECONDS
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
-
-    <!-- TELEGRAM BUTTON 2 -->
-    <a
-        href="https://t.me/pb777jas"
-        class="telegram-btn"
-    >
-
-        <span class="telegram-icon">➤</span>
-
-        <span class="button-text">
-            Send Telegram Message Now
-        </span>
-
-        <span class="telegram-icon">➤</span>
-
-    </a>
-
-
-    <!-- TERMS -->
-    <div class="terms">
-
-        Terms & Conditions:
-        आगे बढ़ने से पहले सभी details और conditions
-        को ध्यान से समझें। कोई भी result guaranteed
-        नहीं है और परिणाम अलग-अलग हो सकते हैं।
-
-    </div>
-
-
-    <!-- BOTTOM PHOTO -->
-    <img
-        src="photo2.jpg"
-        class="bottom-photo"
-        alt="Parvinder Singh"
-    >
-
-
-    <!-- FOOTER -->
-    <div class="footer">
-        © 2026 Parvinder Singh
-    </div>
+<div class="text">
+यहाँ काम पूरी जानकारी और साफ communication के साथ किया जाता है।
+आगे बढ़ने से पहले सभी details और conditions ध्यान से समझें।
+</div>
 
 </div>
 
+<a href="https://t.me/pb777jas" class="telegram-btn">
 
-<!-- COUNTDOWN SCRIPT -->
+<span class="telegram-icon">➤</span>
+
+<span class="button-text">
+Send Telegram Message Now
+</span>
+
+<span class="telegram-icon">➤</span>
+
+</a>
+
+<div class="card">
+
+<div class="count-title">
+⏳ Limited Time
+</div>
+
+<div class="timer">
+
+<div class="time-box">
+<div class="number" id="hours">06</div>
+<div class="label">HOURS</div>
+</div>
+
+<div class="time-box">
+<div class="number" id="minutes">00</div>
+<div class="label">MINUTES</div>
+</div>
+
+<div class="time-box">
+<div class="number" id="seconds">00</div>
+<div class="label">SECONDS</div>
+</div>
+
+</div>
+
+</div>
+
+<a href="https://t.me/pb777jas" class="telegram-btn">
+
+<span class="telegram-icon">➤</span>
+
+<span class="button-text">
+Send Telegram Message Now
+</span>
+
+<span class="telegram-icon">➤</span>
+
+</a>
+
+<div class="terms">
+Terms & Conditions: आगे बढ़ने से पहले सभी details और conditions
+को ध्यान से समझें। कोई भी result guaranteed नहीं है और परिणाम
+अलग-अलग हो सकते हैं।
+</div>
+
+<img src="newphoto.jpg" class="bottom-photo" alt="Parvinder Singh">
+
+<div class="footer">
+© 2026 Parvinder Singh
+</div>
+
+</div>
+
 <script>
 
 let endTime = Date.now() + (6 * 60 * 60 * 1000);
 
+function updateTimer(){
 
-function updateTimer() {
+let remaining = endTime - Date.now();
 
-    let remaining = endTime - Date.now();
+if(remaining <= 0){
+remaining = 0;
+}
 
+let hours = Math.floor(
+remaining / (1000 * 60 * 60)
+);
 
-    if (remaining <= 0) {
+let minutes = Math.floor(
+(remaining / (1000 * 60)) % 60
+);
 
-        document.getElementById("hours").textContent = "00";
-        document.getElementById("minutes").textContent = "00";
-        document.getElementById("seconds").textContent = "00";
+let seconds = Math.floor(
+(remaining / 1000) % 60
+);
 
-        return;
-    }
+document.getElementById("hours").textContent =
+String(hours).padStart(2,"0");
 
+document.getElementById("minutes").textContent =
+String(minutes).padStart(2,"0");
 
-    let hours =
-        Math.floor(
-            remaining / (1000 * 60 * 60)
-        );
-
-
-    let minutes =
-        Math.floor(
-            (remaining / (1000 * 60)) % 60
-        );
-
-
-    let seconds =
-        Math.floor(
-            (remaining / 1000) % 60
-        );
-
-
-    document.getElementById("hours").textContent =
-        String(hours).padStart(2, "0");
-
-
-    document.getElementById("minutes").textContent =
-        String(minutes).padStart(2, "0");
-
-
-    document.getElementById("seconds").textContent =
-        String(seconds).padStart(2, "0");
+document.getElementById("seconds").textContent =
+String(seconds).padStart(2,"0");
 
 }
 
-
-/* PAGE LOAD PAR TIMER START */
 updateTimer();
 
-
-/* HAR 1 SECOND BAAD UPDATE */
-setInterval(updateTimer, 1000);
+setInterval(updateTimer,1000);
 
 </script>
 
