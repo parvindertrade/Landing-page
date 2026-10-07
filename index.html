@@ -18,21 +18,213 @@
     }
 
     body {
-      background: #050505;
+      background:
+        radial-gradient(circle at 50% 0%, #240000 0%, #090000 28%, #050505 65%);
       color: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.5;
+      overflow-x: hidden;
 
-      /* Text selection ko limit karta hai */
       user-select: none;
       -webkit-user-select: none;
     }
 
+    /* =========================
+       DIWALI BACKGROUND
+    ========================== */
+
+    .diwali-sky {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
     .page {
+      position: relative;
+      z-index: 2;
+
       width: 100%;
       max-width: 430px;
       margin: 0 auto;
       padding: 20px 14px 35px;
+    }
+
+    /* Floating golden lights */
+
+    .spark {
+      position: absolute;
+      width: 4px;
+      height: 4px;
+      background: #ffd54a;
+      border-radius: 50%;
+      box-shadow:
+        0 0 6px #ffd54a,
+        0 0 14px #ff9d00;
+      animation: twinkle 1.7s infinite alternate;
+    }
+
+    .spark:nth-child(1) { left: 8%; top: 18%; animation-delay: .2s; }
+    .spark:nth-child(2) { left: 88%; top: 25%; animation-delay: .7s; }
+    .spark:nth-child(3) { left: 15%; top: 48%; animation-delay: 1s; }
+    .spark:nth-child(4) { left: 92%; top: 58%; animation-delay: .4s; }
+    .spark:nth-child(5) { left: 5%; top: 78%; animation-delay: 1.3s; }
+    .spark:nth-child(6) { left: 82%; top: 82%; animation-delay: .8s; }
+
+    @keyframes twinkle {
+      from {
+        opacity: .2;
+        transform: scale(.6);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1.5);
+      }
+    }
+
+    /* =========================
+       ROCKET
+    ========================== */
+
+    .rocket {
+      position: fixed;
+      bottom: -80px;
+      width: 4px;
+      height: 42px;
+      border-radius: 50%;
+      background: linear-gradient(to top, #ff5a00, #fff, #ff3030);
+      box-shadow:
+        0 0 8px #ff4d00,
+        0 0 18px #ff9100;
+
+      pointer-events: none;
+      z-index: 1;
+
+      animation: rocketFly 3.4s linear forwards;
+    }
+
+    .rocket::before {
+      content: "";
+      position: absolute;
+      bottom: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 7px;
+      height: 28px;
+      border-radius: 50%;
+      background: linear-gradient(
+        to bottom,
+        #fff,
+        #ffd000,
+        #ff6500,
+        transparent
+      );
+      filter: blur(1px);
+    }
+
+    @keyframes rocketFly {
+      0% {
+        transform: translateY(0) scale(.8);
+        opacity: 0;
+      }
+
+      10% {
+        opacity: 1;
+      }
+
+      75% {
+        opacity: 1;
+      }
+
+      100% {
+        transform: translateY(-115vh) scale(1);
+        opacity: 0;
+      }
+    }
+
+    /* =========================
+       FIREWORK BURST
+    ========================== */
+
+    .firework {
+      position: fixed;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 1;
+      animation: fireworkFade 1.1s ease-out forwards;
+    }
+
+    .firework i {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: #ffd43b;
+      box-shadow:
+        0 0 6px #ffd43b,
+        0 0 12px #ff7b00;
+      animation: burst 1s ease-out forwards;
+      transform: rotate(var(--angle)) translateY(0);
+    }
+
+    @keyframes burst {
+      0% {
+        opacity: 1;
+        transform:
+          rotate(var(--angle))
+          translateY(0);
+      }
+
+      100% {
+        opacity: 0;
+        transform:
+          rotate(var(--angle))
+          translateY(var(--distance));
+      }
+    }
+
+    @keyframes fireworkFade {
+      0% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* =========================
+       DIWALI TITLE
+    ========================== */
+
+    .diwali-title {
+      text-align: center;
+      margin: 2px 0 17px;
+      padding: 10px 5px;
+
+      color: #ffd54a;
+      font-size: 21px;
+      font-weight: 800;
+
+      text-shadow:
+        0 0 7px #ff9800,
+        0 0 16px rgba(255, 80, 0, .7);
+
+      animation: diwaliGlow 1.8s infinite alternate;
+    }
+
+    @keyframes diwaliGlow {
+      from {
+        text-shadow:
+          0 0 5px #ff9800,
+          0 0 10px rgba(255, 80, 0, .4);
+      }
+
+      to {
+        text-shadow:
+          0 0 9px #ffd54a,
+          0 0 22px rgba(255, 80, 0, .9);
+      }
     }
 
     /* =========================
@@ -52,7 +244,9 @@
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #e50914;
-      box-shadow: 0 0 22px rgba(229, 9, 20, 0.45);
+      box-shadow:
+        0 0 18px rgba(229, 9, 20, .45),
+        0 0 35px rgba(255, 170, 0, .18);
 
       -webkit-user-drag: none;
       user-drag: none;
@@ -74,6 +268,8 @@
       font-size: 28px;
       font-weight: 800;
       margin-bottom: 3px;
+
+      text-shadow: 0 0 12px rgba(255, 0, 0, .35);
     }
 
     .subtitle {
@@ -108,7 +304,8 @@
       font-size: 17px;
       font-weight: 700;
 
-      box-shadow: 0 6px 18px rgba(229, 9, 20, 0.25);
+      box-shadow:
+        0 6px 18px rgba(229, 9, 20, .25);
     }
 
     .telegram-icon {
@@ -131,7 +328,7 @@
     ========================== */
 
     .info-box {
-      background: #111111;
+      background: rgba(17, 17, 17, .94);
       border: 1px solid #292929;
       border-radius: 12px;
 
@@ -159,7 +356,7 @@
     ========================== */
 
     .timer-box {
-      background: #111111;
+      background: rgba(17, 17, 17, .94);
       border: 1px solid #292929;
       border-radius: 12px;
 
@@ -194,11 +391,12 @@
       font-weight: 800;
 
       margin: 25px 0 13px;
+
+      text-shadow: 0 0 10px rgba(255, 0, 0, .25);
     }
 
     /* =========================
        CUSTOMER REVIEWS
-       2 x 2 GRID
     ========================== */
 
     .reviews {
@@ -235,14 +433,11 @@
       display: block;
 
       border-radius: 6px;
-
       background: #000000;
 
-      /* Image drag disable */
       -webkit-user-drag: none;
       user-drag: none;
 
-      /* Long press/save ko difficult karta hai */
       pointer-events: none;
     }
 
@@ -282,13 +477,12 @@
 
       border-radius: 7px;
 
-      /* Video download button hide */
       -webkit-user-drag: none;
       user-drag: none;
     }
 
     /* =========================
-       @goodarts1185 BUTTON
+       @goodarts1185
     ========================== */
 
     .profile-button {
@@ -319,7 +513,8 @@
         #515bd4
       );
 
-      box-shadow: 0 6px 18px rgba(221, 42, 123, 0.25);
+      box-shadow:
+        0 6px 18px rgba(221, 42, 123, .25);
     }
 
     .instagram-icon {
@@ -353,12 +548,13 @@
       height: 115px;
 
       border-radius: 50%;
-
       object-fit: cover;
 
       border: 3px solid #e50914;
 
-      box-shadow: 0 0 22px rgba(229, 9, 20, 0.45);
+      box-shadow:
+        0 0 18px rgba(229, 9, 20, .45),
+        0 0 35px rgba(255, 170, 0, .18);
 
       -webkit-user-drag: none;
       user-drag: none;
@@ -424,6 +620,10 @@
         font-size: 16px;
       }
 
+      .diwali-title {
+        font-size: 19px;
+      }
+
       .review-box {
         height: 235px;
       }
@@ -437,7 +637,30 @@
 
 <body>
 
+  <!-- =========================
+       DIWALI ANIMATIONS
+  ========================== -->
+
+  <div class="diwali-sky">
+
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="spark"></span>
+    <span class="spark"></span>
+
+  </div>
+
+
   <main class="page">
+
+    <!-- DIWALI GREETING -->
+
+    <div class="diwali-title">
+      🪔 ✨ Happy Diwali in Advance ✨ 🪔
+    </div>
+
 
     <!-- TOP PHOTO -->
 
@@ -506,14 +729,13 @@
 
       <p class="info-text">
         यहाँ आपको हमारे काम से जुड़ी जानकारी,
-        reviews और उपलब्ध Videos देखने को मिलेंगी।
-
-    
-        customers review Dekhne K Liye Site Scroll Kare 🥰 
+        reviews और उपलब्ध videos देखने को मिलेंगी।
+        
+        customers review dekhne ke liye site ko scroll Down Kare 👍
 
         <br><br>
 
-        Happy Diwali Badiya Ho Jayegi is Baar Aapki 👍
+        Is baar Happy diwali Badiya ho jayegi 
       </p>
 
     </section>
@@ -542,7 +764,7 @@
 
       </span>
 
-      Telegram पर बात करें
+      Send Teligram Massage Now
     </a>
 
 
@@ -734,7 +956,7 @@
 
       आगे बढ़ने से पहले सभी details और conditions
       को ध्यान से समझें।
-      Baki aapka bhai hai massege kro telegram per 👍
+      Baki Tumhara Bhai Parvinder Hai na 
 
     </div>
 
@@ -742,43 +964,38 @@
     <!-- FOOTER -->
 
     <footer>
-      © 2026 Parvinder Singh
+      © Since 2020 Batch Parvinder Singh
     </footer>
 
   </main>
 
 
   <!-- =========================
-       PROTECTION
+       JAVASCRIPT
   ========================== -->
 
   <script>
 
-    /* Right-click disable */
+    /* =========================
+       PROTECTION
+    ========================== */
+
     document.addEventListener("contextmenu", function(event) {
       event.preventDefault();
     });
 
-
-    /* Dragging disable */
     document.addEventListener("dragstart", function(event) {
       event.preventDefault();
     });
 
-
-    /* Copy disable */
     document.addEventListener("copy", function(event) {
       event.preventDefault();
     });
 
-
-    /* Cut disable */
     document.addEventListener("cut", function(event) {
       event.preventDefault();
     });
 
-
-    /* Text selection disable */
     document.addEventListener("selectstart", function(event) {
       event.preventDefault();
     });
@@ -830,7 +1047,135 @@
 
     setInterval(updateCountdown, 1000);
 
+
+    /* =========================
+       DIWALI ROCKETS
+    ========================== */
+
+    function launchRocket() {
+
+      const rocket = document.createElement("div");
+
+      rocket.className = "rocket";
+
+      rocket.style.left =
+        (8 + Math.random() * 84) + "vw";
+
+      document.querySelector(".diwali-sky")
+        .appendChild(rocket);
+
+      setTimeout(function() {
+
+        const rect = rocket.getBoundingClientRect();
+
+        createFirework(
+          rect.left,
+          Math.max(80, rect.top + 5)
+        );
+
+        rocket.remove();
+
+      }, 2500);
+    }
+
+
+    /* =========================
+       FIREWORK BURST
+    ========================== */
+
+    function createFirework(x, y) {
+
+      const firework =
+        document.createElement("div");
+
+      firework.className = "firework";
+
+      firework.style.left = x + "px";
+      firework.style.top = y + "px";
+
+      const colors = [
+        "#ffd54a",
+        "#ff4b4b",
+        "#ffffff",
+        "#ff9f1c"
+      ];
+
+      const color =
+        colors[Math.floor(Math.random() * colors.length)];
+
+      for (let i = 0; i < 18; i++) {
+
+        const particle =
+          document.createElement("i");
+
+        const angle =
+          (360 / 18) * i;
+
+        const distance =
+          (45 + Math.random() * 65) + "px";
+
+        particle.style.setProperty(
+          "--angle",
+          angle + "deg"
+        );
+
+        particle.style.setProperty(
+          "--distance",
+          distance
+        );
+
+        particle.style.background = color;
+
+        particle.style.boxShadow =
+          "0 0 6px " + color +
+          ", 0 0 13px " + color;
+
+        firework.appendChild(particle);
+      }
+
+      document.querySelector(".diwali-sky")
+        .appendChild(firework);
+
+      setTimeout(function() {
+        firework.remove();
+      }, 1200);
+    }
+
+
+    /* =========================
+       EXTRA RANDOM FIREWORKS
+    ========================== */
+
+    function randomFirework() {
+
+      const x =
+        20 + Math.random() * (window.innerWidth - 40);
+
+      const y =
+        80 + Math.random() * (window.innerHeight * .42);
+
+      createFirework(x, y);
+    }
+
+
+    /* Rockets start one after another */
+
+    setTimeout(launchRocket, 800);
+
+    setInterval(function() {
+      launchRocket();
+    }, 4200);
+
+
+    /* Occasional background fireworks */
+
+    setTimeout(randomFirework, 1800);
+
+    setInterval(function() {
+      randomFirework();
+    }, 5200);
+
   </script>
 
 </body>
-                                       </html>
+  </html>
