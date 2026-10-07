@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>👑 Parvinder Singh</title>
+  <title>👑 SureShot King — Parvinder Singh</title>
 
   <style>
     * {
@@ -78,7 +78,7 @@
     }
 
     /* =========================
-       TELEGRAM BUTTON
+       TELEGRAM BUTTONS
     ========================== */
 
     .telegram-button {
@@ -105,8 +105,13 @@
     }
 
     .telegram-icon {
-      font-size: 19px;
-      display: inline-block;
+      width: 22px;
+      height: 22px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 17px;
+
       animation: telegramMove 1.4s ease-in-out infinite;
     }
 
@@ -121,7 +126,7 @@
     }
 
     /* =========================
-       INFO BOX
+       WORK INFORMATION
     ========================== */
 
     .info-box {
@@ -149,7 +154,7 @@
     }
 
     /* =========================
-       TIMER
+       COUNTDOWN
     ========================== */
 
     .timer-box {
@@ -177,7 +182,7 @@
     }
 
     /* =========================
-       SECTION HEADING
+       SECTION HEADINGS
     ========================== */
 
     .section-heading {
@@ -191,8 +196,8 @@
     }
 
     /* =========================
-       REVIEW GRID
-       2 TOP + 2 BOTTOM
+       CUSTOMER REVIEWS
+       2 x 2 GRID
     ========================== */
 
     .reviews {
@@ -271,7 +276,7 @@
     }
 
     /* =========================
-       @goodarts1185 BUTTON
+       INSTAGRAM STYLE BUTTON
     ========================== */
 
     .profile-button {
@@ -306,7 +311,18 @@
     }
 
     .instagram-icon {
-      font-size: 21px;
+      width: 22px;
+      height: 22px;
+
+      border: 2px solid #ffffff;
+      border-radius: 6px;
+
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 12px;
+      font-weight: bold;
     }
 
     /* =========================
@@ -471,8 +487,11 @@
         reviews और उपलब्ध videos देखने को मिलेंगी।
         आगे बढ़ने से पहले सभी details और conditions
         को ध्यान से समझें।
+
         <br><br>
-        किसी भी tarah ka risk nahi hai full secure 👍
+
+        किसी भी result की guarantee नहीं दी जाती
+        और परिणाम अलग-अलग हो सकते हैं।
       </p>
 
     </section>
@@ -562,43 +581,85 @@
     <div class="videos">
 
       <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="video1.mp4" type="video/mp4">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="video1.mp4"
+            type="video/mp4"
+          >
           Your browser does not support video.
         </video>
       </div>
 
       <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="video2.mp4" type="video/mp4">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="video2.mp4"
+            type="video/mp4"
+          >
           Your browser does not support video.
         </video>
       </div>
 
       <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="video3.mp4" type="video/mp4">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="video3.mp4"
+            type="video/mp4"
+          >
           Your browser does not support video.
         </video>
       </div>
 
       <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="video4.mp4" type="video/mp4">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="video4.mp4"
+            type="video/mp4"
+          >
           Your browser does not support video.
         </video>
       </div>
 
       <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="video5.mp4" type="video/mp4">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="video5.mp4"
+            type="video/mp4"
+          >
           Your browser does not support video.
         </video>
       </div>
 
       <div class="video-box">
-        <video controls playsinline preload="metadata">
-          <source src="video6.mp4" type="video/mp4">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+        >
+          <source
+            src="video6.mp4"
+            type="video/mp4"
+          >
           Your browser does not support video.
         </video>
       </div>
@@ -607,8 +668,8 @@
 
 
     <!-- =========================
-         @goodarts1185 BUTTON
-         GOES TO TELEGRAM
+         @goodarts1185
+         BUTTON OPENS TELEGRAM
     ========================== -->
 
     <a
@@ -648,7 +709,10 @@
 
       <strong>Terms &amp; Conditions:</strong>
 
-   👍 Happy Diwali badiya kr lo apni 👍
+      आगे बढ़ने से पहले सभी details और conditions
+      को ध्यान से समझें।
+      कोई भी result guaranteed नहीं है और
+      परिणाम अलग-अलग हो सकते हैं।
 
     </div>
 
@@ -665,12 +729,12 @@
 
 
   <!-- =========================
-       6 HOUR COUNTDOWN SCRIPT
-  ========================== -->
+       6 HOUR COUNTDOWN
+    ========================== -->
 
   <script>
 
-    const SIX_HOURS = 4 * 60 * 60 * 1000;
+    const SIX_HOURS = 6 * 60 * 60 * 1000;
 
     let endTime = Date.now() + SIX_HOURS;
 
@@ -683,9 +747,11 @@
         remaining = SIX_HOURS;
       }
 
-      const totalSeconds = Math.floor(remaining / 1000);
+      const totalSeconds =
+        Math.floor(remaining / 1000);
 
-      const hours = Math.floor(totalSeconds / 3600);
+      const hours =
+        Math.floor(totalSeconds / 3600);
 
       const minutes =
         Math.floor((totalSeconds % 3600) / 60);
@@ -693,9 +759,14 @@
       const seconds =
         totalSeconds % 60;
 
-      const h = String(hours).padStart(2, "0");
-      const m = String(minutes).padStart(2, "0");
-      const s = String(seconds).padStart(2, "0");
+      const h =
+        String(hours).padStart(2, "0");
+
+      const m =
+        String(minutes).padStart(2, "0");
+
+      const s =
+        String(seconds).padStart(2, "0");
 
       document.getElementById("countdown").textContent =
         h + ":" + m + ":" + s;
@@ -708,4 +779,4 @@
   </script>
 
 </body>
-        </html>
+</html>
