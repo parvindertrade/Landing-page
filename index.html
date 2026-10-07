@@ -7,17 +7,23 @@
 <title>SureShot King 👑 | Parvinder Singh</title>
 
 <style>
+
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
 }
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
+    min-height:100vh;
     background:#050505;
     color:#fff;
     font-family:Arial,sans-serif;
-    padding:18px 12px;
+    padding:15px 10px;
 }
 
 .container{
@@ -27,7 +33,16 @@ body{
     text-align:center;
 }
 
-/* PHOTOS */
+
+/* =========================
+   PHOTOS
+========================= */
+
+.photo-link{
+    display:block;
+    width:max-content;
+    margin:0 auto;
+}
 
 .profile-photo{
     width:105px;
@@ -37,45 +52,66 @@ body{
     border:3px solid #ff2020;
     box-shadow:0 0 22px rgba(255,0,0,.35);
     display:block;
-    margin:0 auto 12px;
+}
+
+.top-photo{
+    margin-bottom:9px;
 }
 
 .bottom-photo{
-    margin:12px auto 8px;
+    margin:10px auto 7px;
 }
 
-/* HEADER */
+
+/* =========================
+   HEADER
+========================= */
 
 .crown{
     font-size:32px;
+    line-height:1;
+    margin-bottom:2px;
 }
 
 .king{
     color:#ff2020;
     font-size:27px;
     font-weight:800;
+    line-height:1.15;
 }
 
 .name{
+    color:#fff;
     font-size:19px;
     font-weight:bold;
-    margin:5px 0 15px;
+    margin-top:5px;
+    margin-bottom:13px;
 }
 
-/* TELEGRAM BUTTON */
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
 
 .telegram-btn{
+    width:100%;
     display:flex;
     align-items:center;
     justify-content:space-between;
+
     background:#e50914;
     color:#fff;
     text-decoration:none;
-    padding:13px 11px;
+
+    padding:13px 10px;
     border-radius:12px;
-    margin:13px 0;
+
+    margin:11px 0;
+
     font-size:15px;
     font-weight:bold;
+
+    box-shadow:0 6px 18px rgba(229,9,20,.30);
 }
 
 .button-text{
@@ -86,152 +122,268 @@ body{
 .telegram-icon{
     width:21px;
     height:21px;
+
+    flex-shrink:0;
+
     background:#fff;
     color:#e50914;
+
     border-radius:50%;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     font-size:12px;
+
     animation:telegramDance 1.2s ease-in-out infinite;
 }
 
 @keyframes telegramDance{
-    0%,100%{transform:translateY(0);}
-    50%{transform:translateY(-4px);}
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-4px);
+    }
+
 }
 
-/* CARD */
+
+/* =========================
+   WORK INFORMATION
+========================= */
 
 .card{
     background:#111;
+
     border:1px solid #292929;
-    border-radius:16px;
-    padding:17px 15px;
-    margin:13px 0;
+
+    border-radius:15px;
+
+    padding:15px 13px;
+
+    margin:11px 0;
+
+    box-shadow:0 7px 22px rgba(0,0,0,.45);
 }
 
 .heading{
     color:#ff2929;
+
     font-size:18px;
+
     font-weight:bold;
-    margin-bottom:9px;
+
+    margin-bottom:7px;
 }
 
 .text{
     color:#d0d0d0;
+
     font-size:14px;
-    line-height:1.6;
+
+    line-height:1.55;
 }
 
-/* COUNTDOWN */
+
+/* =========================
+   COUNTDOWN
+========================= */
 
 .count-title{
     color:#ff3030;
+
     font-size:16px;
+
     font-weight:bold;
-    margin-bottom:12px;
+
+    margin-bottom:10px;
 }
 
 .timer{
     display:flex;
+
     justify-content:center;
-    gap:7px;
+
+    gap:6px;
 }
 
 .time-box{
     background:#050505;
+
     border:1px solid #333;
+
     border-radius:9px;
-    padding:9px 6px;
-    min-width:65px;
+
+    padding:8px 5px;
+
+    min-width:63px;
 }
 
 .number{
+    color:#fff;
+
     font-size:21px;
+
     font-weight:bold;
 }
 
 .label{
     color:#888;
+
     font-size:9px;
+
     margin-top:3px;
 }
 
-/* REVIEW */
+
+/* =========================
+   REVIEW SECTION
+   ALL 4 IN ONE SCREEN
+========================= */
+
+.review-section{
+    width:100%;
+    margin-top:14px;
+}
 
 .section-title{
     color:#ff2929;
+
     font-size:20px;
+
     font-weight:bold;
-    margin:20px 0 10px;
+
+    margin:9px 0 7px;
+}
+
+.review-grid{
+
+    width:100%;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:5px;
 }
 
 .review-card{
-    width:100%;
-    background:#111;
-    border:1px solid #292929;
-    border-radius:12px;
-    padding:6px;
-    margin:12px 0;
-}
 
-/*
-   IMPORTANT:
-   Screenshot ko crop nahi kiya gaya.
-   Poora original screenshot proportion ke saath dikhega.
-*/
+    width:100%;
+
+    height:145px;
+
+    background:#111;
+
+    border:1px solid #292929;
+
+    border-radius:8px;
+
+    padding:2px;
+
+    overflow:hidden;
+}
 
 .review-card img{
+
     width:100%;
-    height:auto;
+
+    height:100%;
+
     display:block;
-    border-radius:8px;
+
     object-fit:contain;
+
+    background:#000;
+
+    border-radius:6px;
 }
 
-/* SECOND SECTION */
+
+/* =========================
+   SECOND SECTION
+========================= */
 
 .second-screen{
-    margin-top:35px;
-    padding-top:18px;
+
+    width:100%;
+
+    margin-top:25px;
+
+    padding-top:15px;
+
     border-top:1px solid #222;
 }
 
 .video-title{
+
     color:#ff2929;
+
     font-size:21px;
+
     font-weight:bold;
-    margin-bottom:12px;
+
+    margin-bottom:9px;
 }
 
+
+/* =========================
+   6 COMPACT VIDEOS
+========================= */
+
 .video-card{
+
     width:100%;
+
     background:#111;
+
     border:1px solid #292929;
-    border-radius:12px;
-    padding:6px;
-    margin:10px 0;
+
+    border-radius:11px;
+
+    padding:5px;
+
+    margin:8px 0;
 }
 
 .video-card video{
+
     width:100%;
-    height:185px;
-    object-fit:contain;
+
+    height:180px;
+
     display:block;
-    border-radius:8px;
+
+    object-fit:contain;
+
     background:#000;
+
+    border-radius:7px;
 }
 
-/* PROFILE / TELEGRAM BUTTON */
+
+/* =========================
+   @goodarts1185 BUTTON
+========================= */
 
 .profile-telegram-btn{
+
     display:inline-flex;
+
     align-items:center;
+
     justify-content:center;
+
     gap:8px;
 
     margin-top:12px;
+
+    margin-bottom:2px;
+
     padding:9px 18px;
 
     border-radius:10px;
@@ -246,320 +398,182 @@ body{
     );
 
     color:#fff;
+
     text-decoration:none;
 
     font-size:15px;
+
     font-weight:bold;
 
-    box-shadow:0 5px 16px rgba(214,41,118,.25);
+    box-shadow:
+        0 5px 16px
+        rgba(214,41,118,.25);
 }
 
 .profile-telegram-btn:active{
     transform:scale(.97);
 }
 
-/* SMALL ICON */
+
+/* INSTAGRAM-STYLE ICON */
 
 .ig-icon{
+
     width:18px;
     height:18px;
+
     border:2px solid #fff;
+
     border-radius:5px;
+
     position:relative;
 }
 
 .ig-icon:before{
+
     content:"";
+
     position:absolute;
+
     width:6px;
     height:6px;
+
     border:2px solid #fff;
+
     border-radius:50%;
+
     left:4px;
     top:4px;
 }
 
 .ig-icon:after{
+
     content:"";
+
     position:absolute;
+
     width:3px;
     height:3px;
+
     background:#fff;
+
     border-radius:50%;
+
     right:1px;
     top:1px;
 }
 
-/* TERMS */
+
+/* =========================
+   TERMS
+========================= */
 
 .terms{
+
     color:#777;
+
     font-size:10px;
+
     line-height:1.5;
-    margin-top:18px;
+
+    margin-top:15px;
 }
 
 .footer{
+
     color:#555;
+
     font-size:10px;
-    margin-top:12px;
+
+    margin-top:9px;
 }
 
 </style>
 </head>
 
+
 <body>
 
 <div class="container">
 
-<!-- TOP PHOTO -->
 
-<a href="https://t.me/pb777jas">
+<!-- =========================
+     TOP PHOTO
+========================= -->
 
-<img
-src="parvinder.jpg"
-class="profile-photo"
-alt="Parvinder Singh">
+<a
+    href="https://t.me/pb777jas"
+    class="photo-link"
+>
+
+    <img
+        src="parvinder.jpg"
+        class="profile-photo top-photo"
+        alt="Parvinder Singh"
+    >
 
 </a>
 
-<div class="crown">👑</div>
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<div class="crown">
+    👑
+</div>
 
 <div class="king">
-SureShot King
+    SureShot King
 </div>
 
 <div class="name">
-Singh Is King — Parvinder Singh
+    Singh Is King — Parvinder Singh
 </div>
 
 
-<!-- TELEGRAM BUTTON -->
+<!-- =========================
+     TELEGRAM BUTTON 1
+========================= -->
 
 <a
-href="https://t.me/pb777jas"
-class="telegram-btn">
+    href="https://t.me/pb777jas"
+    class="telegram-btn"
+>
 
-<span class="telegram-icon">➤</span>
+    <span class="telegram-icon">
+        ➤
+    </span>
 
-<span class="button-text">
-Send Telegram Message Now
-</span>
+    <span class="button-text">
+        Send Telegram Message Now
+    </span>
 
-<span class="telegram-icon">➤</span>
+    <span class="telegram-icon">
+        ➤
+    </span>
 
 </a>
 
 
-<!-- WORK INFORMATION -->
+<!-- =========================
+     WORK INFORMATION
+========================= -->
 
 <div class="card">
 
-<div class="heading">
-भरोसा • Genuine • प्रोफेशनल काम
-</div>
+    <div class="heading">
+        भरोसा • पारदर्शिता • प्रोफेशनल काम
+    </div>
 
-<div class="text">
-यहाँ काम पूरी जानकारी और साफ communication के साथ किया जाता है।
-Niche review Dekh sakte hai Sabhi videos review b hai
-</div>
-
-</div>
-
-
-<!-- SECOND TELEGRAM BUTTON -->
-
-<a
-href="https://t.me/pb777jas"
-class="telegram-btn">
-
-<span class="telegram-icon">➤</span>
-
-<span class="button-text">
-Send Telegram Message Now
-</span>
-
-<span class="telegram-icon">➤</span>
-
-</a>
-
-
-<!-- COUNTDOWN -->
-
-<div class="card">
-
-<div class="count-title">
-⏳ Limited Time
-</div>
-
-<div class="timer">
-
-<div class="time-box">
-<div class="number" id="hours">06</div>
-<div class="label">HOURS</div>
-</div>
-
-<div class="time-box">
-<div class="number" id="minutes">00</div>
-<div class="label">MINUTES</div>
-</div>
-
-<div class="time-box">
-<div class="number" id="seconds">00</div>
-<div class="label">SECONDS</div>
-</div>
-
-</div>
+    <div class="text">
+        यहाँ काम पूरी जानकारी और साफ communication के साथ किया जाता है।
+        आगे बढ़ने से पहले सभी details और conditions ध्यान से समझें।
+    </div>
 
 </div>
 
 
-<!-- REVIEWS -->
-
-<div class="section-title">
-⭐ Review Screenshots
-</div>
-
-<div class="review-card">
-<img src="review1.jpg" alt="Review 1">
-</div>
-
-<div class="review-card">
-<img src="review2.jpg" alt="Review 2">
-</div>
-
-<div class="review-card">
-<img src="review3.jpg" alt="Review 3">
-</div>
-
-<div class="review-card">
-<img src="review4.jpg" alt="Review 4">
-</div>
-
-
-<!-- SECOND SCREEN -->
-
-<div class="second-screen">
-
-<div class="video-title">
-🎥 Video Reviews
-</div>
-
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video1.mp4" type="video/mp4">
-</video>
-</div>
-
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video2.mp4" type="video/mp4">
-</video>
-</div>
-
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video3.mp4" type="video/mp4">
-</video>
-</div>
-
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video4.mp4" type="video/mp4">
-</video>
-</div>
-
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video5.mp4" type="video/mp4">
-</video>
-</div>
-
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video6.mp4" type="video/mp4">
-</video>
-</div>
-
-
-<!-- TELEGRAM DESTINATION BUTTON -->
-
-<a
-href="https://t.me/pb777jas"
-class="profile-telegram-btn">
-
-<span class="ig-icon"></span>
-
-<span>@goodarts1185</span>
-
-</a>
-
-
-<!-- BOTTOM PHOTO -->
-
-<a href="https://t.me/pb777jas">
-
-<img
-src="kingphoto.jpg"
-class="profile-photo bottom-photo"
-alt="Parvinder Singh">
-
-</a>
-
-
-<div class="terms">
-Terms & Conditions: आगे बढ़ने से पहले सभी details और
-review dekhe Baki aapka bhai Parvinder hai na Happy diwali badiya ho jayegi 👍
-
-<div class="footer">
-© 2026 Parvinder Singh
-</div>
-
-</div>
-
-</div>
-
-
-<script>
-
-let endTime = Date.now() + (6 * 60 * 60 * 1000);
-
-function updateTimer(){
-
-let remaining = endTime - Date.now();
-
-if(remaining < 0){
-remaining = 0;
-}
-
-let hours = Math.floor(
-remaining / (1000 * 60 * 60)
-);
-
-let minutes = Math.floor(
-(remaining / (1000 * 60)) % 60
-);
-
-let seconds = Math.floor(
-(remaining / 1000) % 60
-);
-
-document.getElementById("hours").textContent =
-String(hours).padStart(2,"0");
-
-document.getElementById("minutes").textContent =
-String(minutes).padStart(2,"0");
-
-document.getElementById("seconds").textContent =
-String(seconds).padStart(2,"0");
-
-}
-
-updateTimer();
-
-setInterval(updateTimer,1000);
-
-</script>
-
-</body>
-    </html>
+<!-- =========================
+     TELEGRAM BUTTON 2
+========================= -->
