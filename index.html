@@ -8,224 +8,249 @@
 
 <style>
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-min-height:100vh;
-background:#050505;
-color:#fff;
-font-family:Arial,sans-serif;
-padding:25px 15px;
+    background:#050505;
+    color:#fff;
+    font-family:Arial,sans-serif;
+    padding:18px 12px;
 }
 
 .container{
-width:100%;
-max-width:430px;
-margin:auto;
-text-align:center;
+    width:100%;
+    max-width:430px;
+    margin:auto;
+    text-align:center;
 }
 
-.top-photo,
-.bottom-photo{
-width:125px;
-height:125px;
-object-fit:cover;
-border-radius:50%;
-border:3px solid #ff2020;
-box-shadow:0 0 25px rgba(255,0,0,.35);
-display:block;
-margin-left:auto;
-margin-right:auto;
-}
+/* PHOTOS */
 
-.top-photo{
-margin-bottom:18px;
+.profile-photo{
+    width:105px;
+    height:105px;
+    object-fit:cover;
+    border-radius:50%;
+    border:3px solid #ff2020;
+    box-shadow:0 0 22px rgba(255,0,0,.35);
+    display:block;
+    margin:0 auto 12px;
 }
 
 .bottom-photo{
-margin-top:30px;
-margin-bottom:5px;
+    margin-top:25px;
+    margin-bottom:8px;
 }
+
+/* HEADER */
 
 .crown{
-font-size:36px;
-margin-bottom:2px;
+    font-size:32px;
+    margin-bottom:1px;
 }
 
 .king{
-color:#ff2020;
-font-size:29px;
-font-weight:800;
-margin-bottom:8px;
+    color:#ff2020;
+    font-size:27px;
+    font-weight:800;
+    margin-bottom:5px;
 }
 
 .name{
-font-size:21px;
-font-weight:bold;
-margin-bottom:22px;
+    font-size:19px;
+    font-weight:bold;
+    margin-bottom:15px;
 }
 
+/* CARDS */
+
 .card{
-background:#111;
-border:1px solid #292929;
-border-radius:18px;
-padding:22px 18px;
-margin:18px 0;
-box-shadow:0 10px 30px rgba(0,0,0,.55);
+    background:#111;
+    border:1px solid #292929;
+    border-radius:16px;
+    padding:17px 15px;
+    margin:13px 0;
+    box-shadow:0 8px 25px rgba(0,0,0,.5);
 }
 
 .heading{
-color:#ff2929;
-font-size:20px;
-font-weight:bold;
-margin-bottom:12px;
+    color:#ff2929;
+    font-size:18px;
+    font-weight:bold;
+    margin-bottom:9px;
 }
 
 .text{
-color:#d0d0d0;
-font-size:15px;
-line-height:1.7;
+    color:#d0d0d0;
+    font-size:14px;
+    line-height:1.6;
 }
 
+/* TELEGRAM BUTTON */
+
 .telegram-btn{
-display:flex;
-align-items:center;
-justify-content:space-between;
-background:#e50914;
-color:#fff;
-text-decoration:none;
-padding:15px 13px;
-border-radius:13px;
-margin:20px 0;
-font-size:16px;
-font-weight:bold;
-box-shadow:0 7px 20px rgba(229,9,20,.35);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:#e50914;
+    color:#fff;
+    text-decoration:none;
+    padding:13px 11px;
+    border-radius:12px;
+    margin:13px 0;
+    font-size:15px;
+    font-weight:bold;
+    box-shadow:0 6px 18px rgba(229,9,20,.3);
 }
 
 .button-text{
-flex:1;
-text-align:center;
+    flex:1;
+    text-align:center;
 }
 
 .telegram-icon{
-width:23px;
-height:23px;
-background:#fff;
-color:#e50914;
-border-radius:50%;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:13px;
-animation:telegramDance 1.2s ease-in-out infinite;
+    width:21px;
+    height:21px;
+    background:#fff;
+    color:#e50914;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:12px;
+    animation:telegramDance 1.2s ease-in-out infinite;
 }
 
 @keyframes telegramDance{
-0%,100%{
-transform:translateY(0);
-}
-50%{
-transform:translateY(-5px);
-}
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-4px);
+    }
 }
 
+/* COUNTDOWN */
+
 .count-title{
-color:#ff3030;
-font-size:17px;
-font-weight:bold;
-margin-bottom:15px;
+    color:#ff3030;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:12px;
 }
 
 .timer{
-display:flex;
-justify-content:center;
-gap:9px;
+    display:flex;
+    justify-content:center;
+    gap:7px;
 }
 
 .time-box{
-background:#050505;
-border:1px solid #333;
-border-radius:10px;
-padding:12px 8px;
-min-width:72px;
+    background:#050505;
+    border:1px solid #333;
+    border-radius:9px;
+    padding:9px 6px;
+    min-width:65px;
 }
 
 .number{
-font-size:24px;
-font-weight:bold;
+    font-size:21px;
+    font-weight:bold;
 }
 
 .label{
-color:#888;
-font-size:10px;
-margin-top:4px;
+    color:#888;
+    font-size:9px;
+    margin-top:3px;
 }
 
-/* VIDEO SECTION */
+/* REVIEWS - ONE SCREEN */
 
 .section-title{
-color:#ff2929;
-font-size:22px;
-font-weight:bold;
-margin:30px 0 15px;
+    color:#ff2929;
+    font-size:20px;
+    font-weight:bold;
+    margin:18px 0 10px;
 }
 
-.video-card{
-background:#111;
-border:1px solid #292929;
-border-radius:16px;
-padding:10px;
-margin:15px 0;
-box-shadow:0 8px 25px rgba(0,0,0,.5);
-}
-
-.video-card video{
-width:100%;
-display:block;
-border-radius:11px;
-background:#000;
-}
-
-/* REVIEW SECTION */
-
-.review-title{
-color:#ff2929;
-font-size:22px;
-font-weight:bold;
-margin:32px 0 15px;
+.review-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
 }
 
 .review-card{
-background:#111;
-border:1px solid #292929;
-border-radius:16px;
-padding:10px;
-margin:15px 0;
-box-shadow:0 8px 25px rgba(0,0,0,.5);
+    background:#111;
+    border:1px solid #292929;
+    border-radius:10px;
+    padding:4px;
 }
 
 .review-card img{
-width:100%;
-height:auto;
-display:block;
-border-radius:11px;
+    width:100%;
+    height:145px;
+    object-fit:cover;
+    display:block;
+    border-radius:7px;
 }
 
+/* SECOND SCREEN */
+
+.second-screen{
+    margin-top:35px;
+    padding-top:18px;
+    border-top:1px solid #222;
+}
+
+.video-title{
+    color:#ff2929;
+    font-size:21px;
+    font-weight:bold;
+    margin-bottom:12px;
+}
+
+/* COMPACT MOBILE VIDEOS */
+
+.video-card{
+    width:100%;
+    background:#111;
+    border:1px solid #292929;
+    border-radius:12px;
+    padding:6px;
+    margin:10px 0;
+}
+
+.video-card video{
+    width:100%;
+    height:185px;
+    object-fit:contain;
+    display:block;
+    border-radius:8px;
+    background:#000;
+}
+
+/* TERMS */
+
 .terms{
-color:#777;
-font-size:11px;
-line-height:1.6;
-margin-top:22px;
+    color:#777;
+    font-size:10px;
+    line-height:1.5;
+    margin-top:18px;
 }
 
 .footer{
-color:#555;
-font-size:11px;
-margin-top:18px;
+    color:#555;
+    font-size:10px;
+    margin-top:12px;
 }
+
 </style>
 </head>
 
@@ -233,56 +258,72 @@ margin-top:18px;
 
 <div class="container">
 
-<!-- TOP PHOTO -->
+<!-- TOP PHOTO - CLICKABLE TELEGRAM -->
 
-<img
-src="parvinder.jpg"
-class="top-photo"
-alt="Parvinder Singh"
->
+<a href="https://t.me/pb777jas">
+    <img
+        src="parvinder.jpg"
+        class="profile-photo"
+        alt="Parvinder Singh"
+    >
+</a>
 
 <div class="crown">👑</div>
 
 <div class="king">
-SureShot King
+    SureShot King
 </div>
 
 <div class="name">
-Singh Is King — Parvinder Singh
+    Singh Is King — Parvinder Singh
 </div>
 
 
-<!-- INTRO CARD -->
+<!-- FIRST TELEGRAM BUTTON -->
+
+<a
+    href="https://t.me/pb777jas"
+    class="telegram-btn"
+>
+    <span class="telegram-icon">➤</span>
+
+    <span class="button-text">
+        Send Telegram Message Now
+    </span>
+
+    <span class="telegram-icon">➤</span>
+</a>
+
+
+<!-- WORK INFORMATION -->
 
 <div class="card">
 
-<div class="heading">
-भरोसा • पारदर्शिता • प्रोफेशनल काम
+    <div class="heading">
+        भरोसा • पारदर्शिता • प्रोफेशनल काम
+    </div>
+
+    <div class="text">
+        यहाँ काम पूरी जानकारी और साफ communication के साथ किया जाता है।
+        आगे बढ़ने से पहले सभी details और conditions ध्यान से समझें।
+    </div>
+
 </div>
 
-<div class="text">
-यहाँ काम पूरी जानकारी और साफ communication के साथ किया जाता है।
-आगे बढ़ने से पहले सभी details और conditions ध्यान से समझें।
-</div>
 
-</div>
-
-
-<!-- TELEGRAM BUTTON -->
+<!-- SECOND TELEGRAM BUTTON -->
 
 <a
-href="https://t.me/pb777jas"
-class="telegram-btn"
+    href="https://t.me/pb777jas"
+    class="telegram-btn"
 >
+    <span class="telegram-icon">➤</span>
 
-<span class="telegram-icon">➤</span>
+    <span class="button-text">
+        Send Telegram Message Now
+    </span>
 
-<span class="button-text">
-Send Telegram Message Now
-</span>
-
-<span class="telegram-icon">➤</span>
-
+    <span class="telegram-icon">➤</span>
 </a>
 
 
@@ -290,136 +331,147 @@ Send Telegram Message Now
 
 <div class="card">
 
-<div class="count-title">
-⏳ Limited Time
+    <div class="count-title">
+        ⏳ Limited Time
+    </div>
+
+    <div class="timer">
+
+        <div class="time-box">
+            <div class="number" id="hours">06</div>
+            <div class="label">HOURS</div>
+        </div>
+
+        <div class="time-box">
+            <div class="number" id="minutes">00</div>
+            <div class="label">MINUTES</div>
+        </div>
+
+        <div class="time-box">
+            <div class="number" id="seconds">00</div>
+            <div class="label">SECONDS</div>
+        </div>
+
+    </div>
+
 </div>
 
-<div class="timer">
 
-<div class="time-box">
-<div class="number" id="hours">06</div>
-<div class="label">HOURS</div>
-</div>
-
-<div class="time-box">
-<div class="number" id="minutes">00</div>
-<div class="label">MINUTES</div>
-</div>
-
-<div class="time-box">
-<div class="number" id="seconds">00</div>
-<div class="label">SECONDS</div>
-</div>
-
-</div>
-
-</div>
-
-
-<!-- 6 VIDEOS -->
+<!-- REVIEWS - FIRST SCREEN -->
 
 <div class="section-title">
-🎥 Video Reviews
+    ⭐ Review Screenshots
 </div>
 
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video1.mp4" type="video/mp4">
-</video>
-</div>
+<div class="review-grid">
 
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video2.mp4" type="video/mp4">
-</video>
-</div>
+    <div class="review-card">
+        <img src="review1.jpg" alt="Review 1">
+    </div>
 
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video3.mp4" type="video/mp4">
-</video>
-</div>
+    <div class="review-card">
+        <img src="review2.jpg" alt="Review 2">
+    </div>
 
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video4.mp4" type="video/mp4">
-</video>
-</div>
+    <div class="review-card">
+        <img src="review3.jpg" alt="Review 3">
+    </div>
 
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video5.mp4" type="video/mp4">
-</video>
-</div>
+    <div class="review-card">
+        <img src="review4.jpg" alt="Review 4">
+    </div>
 
-<div class="video-card">
-<video controls playsinline preload="metadata">
-<source src="video6.mp4" type="video/mp4">
-</video>
 </div>
 
 
-<!-- TELEGRAM BUTTON -->
+<!-- SECOND SCREEN START -->
 
-<a
-href="https://t.me/pb777jas"
-class="telegram-btn"
->
+<div class="second-screen">
 
-<span class="telegram-icon">➤</span>
-
-<span class="button-text">
-Send Telegram Message Now
-</span>
-
-<span class="telegram-icon">➤</span>
-
-</a>
+    <div class="video-title">
+        🎥 Video Reviews
+    </div>
 
 
-<!-- 4 SCREENSHOT REVIEWS -->
+    <!-- VIDEO 1 -->
 
-<div class="review-title">
-⭐ Review Screenshots
-</div>
-
-<div class="review-card">
-<img src="review1.jpg" alt="Review 1">
-</div>
-
-<div class="review-card">
-<img src="review2.jpg" alt="Review 2">
-</div>
-
-<div class="review-card">
-<img src="review3.jpg" alt="Review 3">
-</div>
-
-<div class="review-card">
-<img src="review4.jpg" alt="Review 4">
-</div>
+    <div class="video-card">
+        <video controls playsinline preload="metadata">
+            <source src="video1.mp4" type="video/mp4">
+        </video>
+    </div>
 
 
-<!-- TERMS -->
+    <!-- VIDEO 2 -->
 
-<div class="terms">
-Terms & Conditions: आगे बढ़ने से पहले सभी details और conditions
-को ध्यान से समझें। कोई भी result guaranteed नहीं है और परिणाम
-अलग-अलग हो सकते हैं।
-</div>
-
-
-<!-- BOTTOM PHOTO -->
-
-<img
-src="kingphoto.jpg"
-class="bottom-photo"
-alt="Parvinder Singh"
->
+    <div class="video-card">
+        <video controls playsinline preload="metadata">
+            <source src="video2.mp4" type="video/mp4">
+        </video>
+    </div>
 
 
-<div class="footer">
-© 2026 Parvinder Singh
+    <!-- VIDEO 3 -->
+
+    <div class="video-card">
+        <video controls playsinline preload="metadata">
+            <source src="video3.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- VIDEO 4 -->
+
+    <div class="video-card">
+        <video controls playsinline preload="metadata">
+            <source src="video4.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- VIDEO 5 -->
+
+    <div class="video-card">
+        <video controls playsinline preload="metadata">
+            <source src="video5.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- VIDEO 6 -->
+
+    <div class="video-card">
+        <video controls playsinline preload="metadata">
+            <source src="video6.mp4" type="video/mp4">
+        </video>
+    </div>
+
+
+    <!-- BOTTOM PHOTO - CLICKABLE TELEGRAM -->
+
+    <a href="https://t.me/pb777jas">
+
+        <img
+            src="kingphoto.jpg"
+            class="profile-photo bottom-photo"
+            alt="Parvinder Singh"
+        >
+
+    </a>
+
+
+    <!-- TERMS -->
+
+    <div class="terms">
+        Terms & Conditions: आगे बढ़ने से पहले सभी details और
+        conditions को ध्यान से समझें। कोई भी result guaranteed
+        नहीं है और परिणाम अलग-अलग हो सकते हैं।
+    </div>
+
+    <div class="footer">
+        © 2026 Parvinder Singh
+    </div>
+
 </div>
 
 </div>
@@ -433,33 +485,32 @@ let endTime = Date.now() + (6 * 60 * 60 * 1000);
 
 function updateTimer(){
 
-let remaining = endTime - Date.now();
+    let remaining = endTime - Date.now();
 
-if(remaining <= 0){
-remaining = 0;
-}
+    if(remaining <= 0){
+        remaining = 0;
+    }
 
-let hours = Math.floor(
-remaining / (1000 * 60 * 60)
-);
+    let hours = Math.floor(
+        remaining / (1000 * 60 * 60)
+    );
 
-let minutes = Math.floor(
-(remaining / (1000 * 60)) % 60
-);
+    let minutes = Math.floor(
+        (remaining / (1000 * 60)) % 60
+    );
 
-let seconds = Math.floor(
-(remaining / 1000) % 60
-);
+    let seconds = Math.floor(
+        (remaining / 1000) % 60
+    );
 
-document.getElementById("hours").textContent =
-String(hours).padStart(2,"0");
+    document.getElementById("hours").textContent =
+        String(hours).padStart(2,"0");
 
-document.getElementById("minutes").textContent =
-String(minutes).padStart(2,"0");
+    document.getElementById("minutes").textContent =
+        String(minutes).padStart(2,"0");
 
-document.getElementById("seconds").textContent =
-String(seconds).padStart(2,"0");
-
+    document.getElementById("seconds").textContent =
+        String(seconds).padStart(2,"0");
 }
 
 updateTimer();
@@ -469,4 +520,4 @@ setInterval(updateTimer,1000);
 </script>
 
 </body>
-</html>
+  </html>
