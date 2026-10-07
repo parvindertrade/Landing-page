@@ -3,10 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>SureShot King 👑 | Parvinder Singh</title>
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
 body{
 min-height:100vh;
@@ -41,7 +46,7 @@ margin-bottom:18px;
 }
 
 .bottom-photo{
-margin-top:25px;
+margin-top:30px;
 margin-bottom:5px;
 }
 
@@ -119,8 +124,12 @@ animation:telegramDance 1.2s ease-in-out infinite;
 }
 
 @keyframes telegramDance{
-0%,100%{transform:translateY(0)}
-50%{transform:translateY(-5px)}
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-5px);
+}
 }
 
 .count-title{
@@ -155,6 +164,56 @@ font-size:10px;
 margin-top:4px;
 }
 
+/* VIDEO SECTION */
+
+.section-title{
+color:#ff2929;
+font-size:22px;
+font-weight:bold;
+margin:30px 0 15px;
+}
+
+.video-card{
+background:#111;
+border:1px solid #292929;
+border-radius:16px;
+padding:10px;
+margin:15px 0;
+box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+
+.video-card video{
+width:100%;
+display:block;
+border-radius:11px;
+background:#000;
+}
+
+/* REVIEW SECTION */
+
+.review-title{
+color:#ff2929;
+font-size:22px;
+font-weight:bold;
+margin:32px 0 15px;
+}
+
+.review-card{
+background:#111;
+border:1px solid #292929;
+border-radius:16px;
+padding:10px;
+margin:15px 0;
+box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+
+.review-card img{
+width:100%;
+height:auto;
+display:block;
+border-radius:11px;
+}
+
 .terms{
 color:#777;
 font-size:11px;
@@ -174,28 +233,47 @@ margin-top:18px;
 
 <div class="container">
 
-<img src="parvinder.jpg" class="top-photo" alt="Parvinder Singh">
+<!-- TOP PHOTO -->
+
+<img
+src="parvinder.jpg"
+class="top-photo"
+alt="Parvinder Singh"
+>
 
 <div class="crown">👑</div>
 
-<div class="king">SureShot King</div>
+<div class="king">
+SureShot King
+</div>
 
-<div class="name">Singh Is King — Parvinder Singh</div>
+<div class="name">
+Singh Is King — Parvinder Singh
+</div>
+
+
+<!-- INTRO CARD -->
 
 <div class="card">
 
 <div class="heading">
-भरोसा • Genuine • प्रोफेशनल काम
+भरोसा • पारदर्शिता • प्रोफेशनल काम
 </div>
 
 <div class="text">
 यहाँ काम पूरी जानकारी और साफ communication के साथ किया जाता है।
- Telegram per hi ka message Abhi Karen 
+आगे बढ़ने से पहले सभी details और conditions ध्यान से समझें।
 </div>
 
 </div>
 
-<a href="https://t.me/pb777jas" class="telegram-btn">
+
+<!-- TELEGRAM BUTTON -->
+
+<a
+href="https://t.me/pb777jas"
+class="telegram-btn"
+>
 
 <span class="telegram-icon">➤</span>
 
@@ -206,6 +284,9 @@ Send Telegram Message Now
 <span class="telegram-icon">➤</span>
 
 </a>
+
+
+<!-- COUNTDOWN -->
 
 <div class="card">
 
@@ -234,7 +315,56 @@ Send Telegram Message Now
 
 </div>
 
-<a href="https://t.me/pb777jas" class="telegram-btn">
+
+<!-- 6 VIDEOS -->
+
+<div class="section-title">
+🎥 Video Reviews
+</div>
+
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="video1.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="video2.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="video3.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="video4.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="video5.mp4" type="video/mp4">
+</video>
+</div>
+
+<div class="video-card">
+<video controls playsinline preload="metadata">
+<source src="video6.mp4" type="video/mp4">
+</video>
+</div>
+
+
+<!-- TELEGRAM BUTTON -->
+
+<a
+href="https://t.me/pb777jas"
+class="telegram-btn"
+>
 
 <span class="telegram-icon">➤</span>
 
@@ -246,12 +376,47 @@ Send Telegram Message Now
 
 </a>
 
-<div class="terms">
-Terms & Conditions: आगे बढ़ने से पहले सभी details और conditions
-को ध्यान से समझें। Baki bhai aapka pervinder hai na
+
+<!-- 4 SCREENSHOT REVIEWS -->
+
+<div class="review-title">
+⭐ Review Screenshots
 </div>
 
-<img src="kingphoto.jpg" class="bottom-photo" alt="Parvinder Singh">
+<div class="review-card">
+<img src="review1.jpg" alt="Review 1">
+</div>
+
+<div class="review-card">
+<img src="review2.jpg" alt="Review 2">
+</div>
+
+<div class="review-card">
+<img src="review3.jpg" alt="Review 3">
+</div>
+
+<div class="review-card">
+<img src="review4.jpg" alt="Review 4">
+</div>
+
+
+<!-- TERMS -->
+
+<div class="terms">
+Terms & Conditions: आगे बढ़ने से पहले सभी details और conditions
+को ध्यान से समझें। कोई भी result guaranteed नहीं है और परिणाम
+अलग-अलग हो सकते हैं।
+</div>
+
+
+<!-- BOTTOM PHOTO -->
+
+<img
+src="kingphoto.jpg"
+class="bottom-photo"
+alt="Parvinder Singh"
+>
+
 
 <div class="footer">
 © 2026 Parvinder Singh
@@ -259,37 +424,40 @@ Terms & Conditions: आगे बढ़ने से पहले सभी deta
 
 </div>
 
+
+<!-- 6 HOUR COUNTDOWN -->
+
 <script>
 
-let endTime=Date.now()+(6*60*60*1000);
+let endTime = Date.now() + (6 * 60 * 60 * 1000);
 
 function updateTimer(){
 
-let remaining=endTime-Date.now();
+let remaining = endTime - Date.now();
 
-if(remaining<=0){
-remaining=0;
+if(remaining <= 0){
+remaining = 0;
 }
 
-let hours=Math.floor(
-remaining/(1000*60*60)
+let hours = Math.floor(
+remaining / (1000 * 60 * 60)
 );
 
-let minutes=Math.floor(
-(remaining/(1000*60))%60
+let minutes = Math.floor(
+(remaining / (1000 * 60)) % 60
 );
 
-let seconds=Math.floor(
-(remaining/1000)%60
+let seconds = Math.floor(
+(remaining / 1000) % 60
 );
 
-document.getElementById("hours").textContent=
+document.getElementById("hours").textContent =
 String(hours).padStart(2,"0");
 
-document.getElementById("minutes").textContent=
+document.getElementById("minutes").textContent =
 String(minutes).padStart(2,"0");
 
-document.getElementById("seconds").textContent=
+document.getElementById("seconds").textContent =
 String(seconds).padStart(2,"0");
 
 }
