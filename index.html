@@ -18,21 +18,62 @@
     }
 
     body {
-      background: #050505;
-      color: #fff;
+      background:
+        radial-gradient(
+          circle at 50% 0%,
+          #063f48 0%,
+          #032a31 30%,
+          #02181d 65%,
+          #010b0e 100%
+        );
+
+      color: #ffffff;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.5;
       overflow-x: hidden;
     }
 
+    /* =========================
+       SOFT TELEGRAM THEME
+    ========================== */
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+
+      background:
+        radial-gradient(
+          circle at 10% 20%,
+          rgba(42, 194, 218, .12),
+          transparent 25%
+        ),
+        radial-gradient(
+          circle at 90% 70%,
+          rgba(42, 194, 218, .10),
+          transparent 28%
+        );
+
+      z-index: 0;
+    }
+
     .page {
+      position: relative;
+      z-index: 2;
+
       width: 100%;
       max-width: 430px;
+
       margin: auto;
+
       padding: 18px 14px 35px;
     }
 
-    /* TOP */
+    /* =========================
+       TOP
+    ========================== */
+
     .top {
       text-align: center;
     }
@@ -40,11 +81,20 @@
     .top-photo {
       width: 105px;
       height: 105px;
+
       border-radius: 50%;
+
       object-fit: cover;
-      border: 3px solid #e50914;
+
+      border: 3px solid #29b6d1;
+
       margin: 8px auto 12px;
+
       display: block;
+
+      box-shadow:
+        0 0 18px rgba(42, 194, 218, .35),
+        0 0 35px rgba(42, 194, 218, .12);
     }
 
     .crown {
@@ -52,194 +102,385 @@
     }
 
     .title {
-      color: #ff3030;
+      color: #35d6ee;
+
       font-size: 30px;
+
       font-weight: 800;
-      margin-top: 2px;
+
+      text-shadow:
+        0 0 12px rgba(42, 194, 218, .45);
     }
 
     .subtitle {
-      color: #ddd;
+      color: #e6fbff;
+
       font-size: 16px;
+
       font-weight: 600;
+
       margin: 3px 0 16px;
     }
 
-    /* BUTTON */
+    /* =========================
+       TELEGRAM BUTTON
+    ========================== */
+
     .telegram-button {
       width: 100%;
+
       display: flex;
+
       align-items: center;
-      justify-content: center;
-      gap: 9px;
-      padding: 14px 12px;
+
+      justify-content: space-between;
+
+      gap: 8px;
+
+      padding: 14px 16px;
+
       margin: 14px 0;
-      background: #e50914;
-      color: #fff;
+
+      background:
+        linear-gradient(
+          135deg,
+          #159fba,
+          #27b9d3,
+          #159fba
+        );
+
+      color: #ffffff;
+
       text-decoration: none;
-      border-radius: 10px;
+
+      border: 1px solid #55e4f5;
+
+      border-radius: 12px;
+
       font-size: 17px;
+
       font-weight: 700;
-      border: 1px solid #ff4545;
-      box-shadow: 0 5px 16px rgba(229, 9, 20, .25);
+
+      box-shadow:
+        0 6px 20px rgba(20, 185, 211, .30),
+        inset 0 1px 0 rgba(255,255,255,.25);
+
+      animation:
+        telegramFloat 1.8s ease-in-out infinite;
+    }
+
+    /* हल्का ऊपर-नीचे movement */
+
+    @keyframes telegramFloat {
+
+      0%,
+      100% {
+        transform: translateY(0);
+      }
+
+      50% {
+        transform: translateY(-5px);
+      }
+
     }
 
     .telegram-button:active {
-      transform: scale(.98);
+      transform: scale(.97);
     }
 
-    .telegram-icon {
-      width: 22px;
-      height: 22px;
-      display: inline-flex;
+    /* =========================
+       TELEGRAM SIDE ICONS
+    ========================== */
+
+    .telegram-side-icon {
+      width: 25px;
+      height: 25px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      flex-shrink: 0;
+
+      background:
+        rgba(255,255,255,.15);
+
+      border-radius: 50%;
+
+      box-shadow:
+        0 0 10px rgba(255,255,255,.15);
     }
 
-    .telegram-icon svg {
-      width: 22px;
-      height: 22px;
+    .telegram-side-icon svg {
+      width: 17px;
+      height: 17px;
+
+      display: block;
     }
 
-    /* INFO */
-    .info-box,
-    .timer-box,
-    .terms {
-      background: #111;
-      border: 1px solid #292929;
-      border-radius: 12px;
-      padding: 16px;
-      margin: 15px 0;
+    .telegram-text {
+      flex: 1;
+
       text-align: center;
     }
 
+    /* =========================
+       INFO BOX
+    ========================== */
+
+    .info-box,
+    .timer-box,
+    .terms {
+
+      background:
+        rgba(3, 27, 32, .92);
+
+      border:
+        1px solid rgba(42, 194, 218, .28);
+
+      border-radius: 12px;
+
+      padding: 16px;
+
+      margin: 15px 0;
+
+      text-align: center;
+
+      box-shadow:
+        0 5px 20px rgba(0,0,0,.20);
+    }
+
     .info-title {
-      color: #ff3030;
+      color: #36d6ec;
+
       font-size: 20px;
+
       margin-bottom: 8px;
+
+      text-shadow:
+        0 0 9px rgba(42, 194, 218, .3);
     }
 
     .info-text {
-      color: #ccc;
+      color: #d8eef1;
+
       font-size: 14px;
+
       line-height: 1.65;
     }
 
-    /* TIMER */
+    /* =========================
+       TIMER
+    ========================== */
+
     .timer-label {
-      color: #999;
+      color: #9ec5cb;
+
       font-size: 13px;
+
       margin-bottom: 4px;
     }
 
     #countdown {
-      color: #ff3030;
+      color: #36d6ec;
+
       font-size: 28px;
+
       font-weight: 800;
+
       letter-spacing: 2px;
+
+      text-shadow:
+        0 0 10px rgba(42, 194, 218, .35);
     }
 
-    /* SECTIONS */
+    /* =========================
+       SECTION HEADING
+    ========================== */
+
     .section-heading {
       text-align: center;
-      color: #ff3030;
+
+      color: #36d6ec;
+
       font-size: 21px;
+
       margin: 24px 0 12px;
+
+      text-shadow:
+        0 0 10px rgba(42, 194, 218, .3);
     }
 
-    /* REVIEWS */
+    /* =========================
+       REVIEWS
+    ========================== */
+
     .reviews {
       display: grid;
+
       grid-template-columns: 1fr 1fr;
+
       gap: 9px;
     }
 
     .review-box {
       height: 240px;
-      background: #000;
-      border: 1px solid #292929;
+
+      background: #011216;
+
+      border:
+        1px solid rgba(42, 194, 218, .25);
+
       border-radius: 9px;
+
       padding: 4px;
+
       overflow: hidden;
     }
 
     .review-box img {
       width: 100%;
       height: 100%;
+
       object-fit: contain;
+
       display: block;
+
       border-radius: 6px;
     }
 
-    /* VIDEOS */
+    /* =========================
+       VIDEOS
+    ========================== */
+
     .videos {
       display: flex;
+
       flex-direction: column;
+
       gap: 12px;
     }
 
     .video-box {
-      background: #0d0d0d;
-      border: 1px solid #292929;
+      background: #011216;
+
+      border:
+        1px solid rgba(42, 194, 218, .25);
+
       border-radius: 10px;
+
       padding: 5px;
+
       overflow: hidden;
     }
 
     .video-box video {
       width: 100%;
+
       height: 190px;
+
       display: block;
+
       object-fit: contain;
+
       background: #000;
+
       border-radius: 7px;
     }
 
-    /* PROFILE */
+    /* =========================
+       PROFILE BUTTON
+    ========================== */
+
     .profile-button {
       width: 100%;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       padding: 14px;
+
       margin: 20px 0 15px;
+
       border-radius: 10px;
+
       color: #fff;
+
       text-decoration: none;
+
       font-size: 16px;
+
       font-weight: 700;
-      background: #222;
-      border: 1px solid #444;
+
+      background:
+        rgba(8, 67, 76, .9);
+
+      border:
+        1px solid rgba(42, 194, 218, .35);
     }
 
-    /* BOTTOM PHOTO */
+    /* =========================
+       BOTTOM PHOTO
+    ========================== */
+
     .bottom-photo {
       width: 105px;
       height: 105px;
+
       border-radius: 50%;
+
       object-fit: cover;
-      border: 3px solid #e50914;
+
+      border: 3px solid #29b6d1;
+
       display: block;
+
       margin: 10px auto 18px;
+
+      box-shadow:
+        0 0 18px rgba(42, 194, 218, .35);
     }
 
-    /* TERMS */
+    /* =========================
+       TERMS
+    ========================== */
+
     .terms {
-      color: #999;
+      color: #9db8bd;
+
       font-size: 12px;
+
       line-height: 1.6;
     }
 
     .terms strong {
-      color: #ddd;
+      color: #dffaff;
     }
+
+    /* =========================
+       FOOTER
+    ========================== */
 
     footer {
       text-align: center;
-      color: #666;
+
+      color: #638086;
+
       font-size: 12px;
+
       margin-top: 15px;
     }
 
+    /* =========================
+       SMALL PHONES
+    ========================== */
+
     @media (max-width: 360px) {
+
       .page {
         padding-left: 10px;
         padding-right: 10px;
@@ -256,15 +497,22 @@
       .video-box video {
         height: 165px;
       }
+
     }
+
   </style>
 </head>
+
 
 <body>
 
 <main class="page">
 
-  <!-- TOP -->
+
+  <!-- =========================
+       TOP
+  ========================== -->
+
   <div class="top">
 
     <img
@@ -273,9 +521,13 @@
       class="top-photo"
     >
 
-    <div class="crown">👑</div>
+    <div class="crown">
+      👑
+    </div>
 
-    <h1 class="title">King</h1>
+    <h1 class="title">
+      King
+    </h1>
 
     <p class="subtitle">
       Singh Is King — Parvinder Singh
@@ -284,30 +536,66 @@
   </div>
 
 
-  <!-- TELEGRAM -->
+  <!-- =========================
+       TELEGRAM BUTTON 1
+  ========================== -->
+
   <a
     href="https://t.me/pb777jas"
     class="telegram-button"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <span class="telegram-icon">
+
+    <!-- LEFT TELEGRAM LOGO -->
+
+    <span class="telegram-side-icon">
+
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
+
         <path
           fill="currentColor"
           d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
         />
+
       </svg>
+
     </span>
 
-    Telegram पर संपर्क करें
+
+    <span class="telegram-text">
+      Telegram पर संपर्क करें
+    </span>
+
+
+    <!-- RIGHT TELEGRAM LOGO -->
+
+    <span class="telegram-side-icon">
+
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
+        <path
+          fill="currentColor"
+          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
+        />
+
+      </svg>
+
+    </span>
+
   </a>
 
 
-  <!-- INFORMATION -->
+  <!-- =========================
+       INFORMATION
+  ========================== -->
+
   <section class="info-box">
 
     <h2 class="info-title">
@@ -323,30 +611,86 @@
   </section>
 
 
-  <!-- SECOND TELEGRAM BUTTON -->
+  <!-- =========================
+       MESSAGE INVITATION
+  ========================== -->
+
+  <section class="info-box">
+
+    <h2 class="info-title">
+      💬 एक बार बात करके देखिए
+    </h2>
+
+    <p class="info-text">
+      अगर आप यहाँ तक आ ही गए हैं,
+      तो आगे Telegram पर भी एक message कर दें।
+      बात करने पर ही सामने वाले के बारे में पता चलता है।
+      हर एक इंसान एक जैसा नहीं होता।
+    </p>
+
+  </section>
+
+
+  <!-- =========================
+       TELEGRAM BUTTON 2
+  ========================== -->
+
   <a
     href="https://t.me/pb777jas"
     class="telegram-button"
     target="_blank"
     rel="noopener noreferrer"
   >
-    <span class="telegram-icon">
+
+    <!-- LEFT TELEGRAM LOGO -->
+
+    <span class="telegram-side-icon">
+
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
+
         <path
           fill="currentColor"
           d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
         />
+
       </svg>
+
     </span>
 
-    Send Telegram Message
+
+    <span class="telegram-text">
+      Send Telegram Message
+    </span>
+
+
+    <!-- RIGHT TELEGRAM LOGO -->
+
+    <span class="telegram-side-icon">
+
+      <svg
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+
+        <path
+          fill="currentColor"
+          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
+        />
+
+      </svg>
+
+    </span>
+
   </a>
 
 
-  <!-- TIMER -->
+  <!-- =========================
+       TIMER
+  ========================== -->
+
   <section class="timer-box">
 
     <div class="timer-label">
@@ -360,7 +704,10 @@
   </section>
 
 
-  <!-- REVIEWS -->
+  <!-- =========================
+       CUSTOMER REVIEWS
+  ========================== -->
+
   <h2 class="section-heading">
     ⭐ Customer Reviews
   </h2>
@@ -368,25 +715,40 @@
   <div class="reviews">
 
     <div class="review-box">
-      <img src="review1.jpg" alt="Customer Review 1">
+      <img
+        src="review1.jpg"
+        alt="Customer Review 1"
+      >
     </div>
 
     <div class="review-box">
-      <img src="review2.jpg" alt="Customer Review 2">
+      <img
+        src="review2.jpg"
+        alt="Customer Review 2"
+      >
     </div>
 
     <div class="review-box">
-      <img src="review3.jpg" alt="Customer Review 3">
+      <img
+        src="review3.jpg"
+        alt="Customer Review 3"
+      >
     </div>
 
     <div class="review-box">
-      <img src="review4.jpg" alt="Customer Review 4">
+      <img
+        src="review4.jpg"
+        alt="Customer Review 4"
+      >
     </div>
 
   </div>
 
 
-  <!-- VIDEOS -->
+  <!-- =========================
+       VIDEO REVIEWS
+  ========================== -->
+
   <h2 class="section-heading">
     🎥 Video Reviews
   </h2>
@@ -394,69 +756,131 @@
   <div class="videos">
 
     <div class="video-box">
+
       <video
         controls
         playsinline
         preload="metadata"
       >
-        <source src="video1.mp4" type="video/mp4">
+
+        <source
+          src="video1.mp4"
+          type="video/mp4"
+        >
+
+        Your browser does not support video.
+
       </video>
+
     </div>
 
-    <div class="video-box">
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-        <source src="video2.mp4" type="video/mp4">
-      </video>
-    </div>
 
     <div class="video-box">
+
       <video
         controls
         playsinline
         preload="metadata"
       >
-        <source src="video3.mp4" type="video/mp4">
+
+        <source
+          src="video2.mp4"
+          type="video/mp4"
+        >
+
+        Your browser does not support video.
+
       </video>
+
     </div>
 
-    <div class="video-box">
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-        <source src="video4.mp4" type="video/mp4">
-      </video>
-    </div>
 
     <div class="video-box">
+
       <video
         controls
         playsinline
         preload="metadata"
       >
-        <source src="video5.mp4" type="video/mp4">
+
+        <source
+          src="video3.mp4"
+          type="video/mp4"
+        >
+
+        Your browser does not support video.
+
       </video>
+
     </div>
 
+
     <div class="video-box">
+
       <video
         controls
         playsinline
         preload="metadata"
       >
-        <source src="video6.mp4" type="video/mp4">
+
+        <source
+          src="video4.mp4"
+          type="video/mp4"
+        >
+
+        Your browser does not support video.
+
       </video>
+
+    </div>
+
+
+    <div class="video-box">
+
+      <video
+        controls
+        playsinline
+        preload="metadata"
+      >
+
+        <source
+          src="video5.mp4"
+          type="video/mp4"
+        >
+
+        Your browser does not support video.
+
+      </video>
+
+    </div>
+
+
+    <div class="video-box">
+
+      <video
+        controls
+        playsinline
+        preload="metadata"
+      >
+
+        <source
+          src="video6.mp4"
+          type="video/mp4"
+        >
+
+        Your browser does not support video.
+
+      </video>
+
     </div>
 
   </div>
 
 
-  <!-- PROFILE -->
+  <!-- =========================
+       PROFILE
+  ========================== -->
+
   <a
     href="https://t.me/pb777jas"
     class="profile-button"
@@ -467,7 +891,10 @@
   </a>
 
 
-  <!-- BOTTOM PHOTO -->
+  <!-- =========================
+       BOTTOM PHOTO
+  ========================== -->
+
   <img
     src="kingphoto.jpg"
     alt="Parvinder Singh"
@@ -475,10 +902,17 @@
   >
 
 
-  <!-- TERMS -->
+  <!-- =========================
+       TERMS
+  ========================== -->
+
   <div class="terms">
 
-    <strong>Terms &amp; Conditions:</strong><br>
+    <strong>
+      Terms &amp; Conditions:
+    </strong>
+
+    <br>
 
     आगे बढ़ने से पहले उपलब्ध जानकारी और
     सभी conditions को ध्यान से समझें।
@@ -486,6 +920,10 @@
 
   </div>
 
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
 
   <footer>
     © Since 2019 King Parvinder Singh
@@ -498,52 +936,97 @@
 
   /* =========================
      6 HOUR TIMER
-     Saves end time in browser
+     Saves timer in browser
   ========================== */
 
-  const SIX_HOURS = 6 * 60 * 60 * 1000;
+  const SIX_HOURS =
+    6 * 60 * 60 * 1000;
 
-  let savedEnd = localStorage.getItem("sessionEnd");
+  let savedEnd =
+    localStorage.getItem("sessionEnd");
 
-  let endTime = savedEnd
-    ? Number(savedEnd)
-    : Date.now() + SIX_HOURS;
+  let endTime =
+    savedEnd
+      ? Number(savedEnd)
+      : Date.now() + SIX_HOURS;
+
 
   if (!savedEnd) {
-    localStorage.setItem("sessionEnd", endTime);
+
+    localStorage.setItem(
+      "sessionEnd",
+      endTime
+    );
+
   }
+
 
   function updateCountdown() {
 
-    let remaining = endTime - Date.now();
+    let remaining =
+      endTime - Date.now();
+
 
     if (remaining <= 0) {
-      endTime = Date.now() + SIX_HOURS;
-      localStorage.setItem("sessionEnd", endTime);
-      remaining = SIX_HOURS;
+
+      endTime =
+        Date.now() + SIX_HOURS;
+
+      localStorage.setItem(
+        "sessionEnd",
+        endTime
+      );
+
+      remaining =
+        SIX_HOURS;
+
     }
 
+
     const totalSeconds =
-      Math.floor(remaining / 1000);
+      Math.floor(
+        remaining / 1000
+      );
+
 
     const hours =
-      Math.floor(totalSeconds / 3600);
+      Math.floor(
+        totalSeconds / 3600
+      );
+
 
     const minutes =
-      Math.floor((totalSeconds % 3600) / 60);
+      Math.floor(
+        (totalSeconds % 3600) / 60
+      );
+
 
     const seconds =
       totalSeconds % 60;
 
-    document.getElementById("countdown").textContent =
-      String(hours).padStart(2, "0") + ":" +
-      String(minutes).padStart(2, "0") + ":" +
+
+    document.getElementById(
+      "countdown"
+    ).textContent =
+
+      String(hours).padStart(2, "0") +
+      ":" +
+
+      String(minutes).padStart(2, "0") +
+      ":" +
+
       String(seconds).padStart(2, "0");
+
   }
+
 
   updateCountdown();
 
-  setInterval(updateCountdown, 1000);
+
+  setInterval(
+    updateCountdown,
+    1000
+  );
 
 
   /* =========================
@@ -551,25 +1034,35 @@
   ========================== */
 
   const videos =
-    document.querySelectorAll(".video-box video");
+    document.querySelectorAll(
+      ".video-box video"
+    );
 
-  videos.forEach(function(video) {
 
-    video.addEventListener("play", function() {
+  videos.forEach(
+    function(video) {
 
-      videos.forEach(function(other) {
+      video.addEventListener(
+        "play",
+        function() {
 
-        if (other !== video) {
-          other.pause();
+          videos.forEach(
+            function(other) {
+
+              if (other !== video) {
+                other.pause();
+              }
+
+            }
+          );
+
         }
+      );
 
-      });
-
-    });
-
-  });
+    }
+  );
 
 </script>
 
 </body>
-</html>
+  </html>
