@@ -14,6 +14,7 @@
   t.src=v;s=b.getElementsByTagName(e)[0];
   s.parentNode.insertBefore(t,s)}(window, document,'script',
   'https://connect.facebook.net/en_US/fbevents.js');
+
   fbq('init', '1849430796215199');
   fbq('track', 'PageView');
   </script>
@@ -70,14 +71,15 @@
       text-align: center;
     }
 
-    .top-photo {
+    .top-photo,
+    .bottom-photo {
       width: 105px;
       height: 105px;
       border-radius: 50%;
       object-fit: cover;
       border: 3px solid #29b6d1;
-      margin: 8px auto 12px;
       display: block;
+      margin: 8px auto 12px;
       box-shadow:
         0 0 18px rgba(42,194,218,.35),
         0 0 35px rgba(42,194,218,.12);
@@ -195,18 +197,43 @@
       line-height: 1.65;
     }
 
+    /* COUNTDOWN */
+    .timer-box {
+      padding: 18px 14px;
+      background:
+        linear-gradient(
+          145deg,
+          rgba(4,39,45,.98),
+          rgba(1,19,23,.98)
+        );
+      border: 1px solid rgba(53,214,238,.38);
+      box-shadow:
+        0 0 20px rgba(42,194,218,.10),
+        inset 0 0 20px rgba(42,194,218,.04);
+    }
+
     .timer-label {
-      color: #9ec5cb;
-      font-size: 13px;
-      margin-bottom: 4px;
+      color: #b9eaf0;
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      letter-spacing: .4px;
     }
 
     #countdown {
+      display: inline-block;
+      padding: 8px 18px;
+      border-radius: 10px;
       color: #36d6ec;
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 800;
-      letter-spacing: 2px;
-      text-shadow: 0 0 10px rgba(42,194,218,.35);
+      letter-spacing: 3px;
+      line-height: 1.1;
+      text-shadow:
+        0 0 8px rgba(42,194,218,.55),
+        0 0 20px rgba(42,194,218,.20);
+      background: rgba(0,10,13,.45);
+      border: 1px solid rgba(53,214,238,.20);
     }
 
     .section-heading {
@@ -280,14 +307,7 @@
     }
 
     .bottom-photo {
-      width: 105px;
-      height: 105px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #29b6d1;
-      display: block;
       margin: 10px auto 18px;
-      box-shadow: 0 0 18px rgba(42,194,218,.35);
     }
 
     .terms {
@@ -308,6 +328,7 @@
     }
 
     @media (max-width: 360px) {
+
       .page {
         padding-left: 10px;
         padding-right: 10px;
@@ -323,6 +344,11 @@
 
       .video-box video {
         height: 165px;
+      }
+
+      #countdown {
+        font-size: 27px;
+        letter-spacing: 2px;
       }
     }
   </style>
@@ -351,6 +377,9 @@
 
   </div>
 
+
+  <!-- TELEGRAM BUTTON -->
+
   <a
     href="https://t.me/pb777jas"
     class="telegram-button"
@@ -375,17 +404,20 @@
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path
           fill="currentColor"
-          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
+          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9 6.9c.5-.3.9-.1.5.2l-1.8 1.7-.8-2.9Z"
         />
       </svg>
     </span>
 
   </a>
 
+
+  <!-- ABOUT -->
+
   <section class="info-box">
 
     <h2 class="info-title">
-      हमारे बारे में
+      📝 NOTE:-📝
     </h2>
 
     <p class="info-text">
@@ -395,6 +427,9 @@
     </p>
 
   </section>
+
+
+  <!-- MESSAGE -->
 
   <section class="info-box">
 
@@ -410,6 +445,9 @@
     </p>
 
   </section>
+
+
+  <!-- SECOND TELEGRAM BUTTON -->
 
   <a
     href="https://t.me/pb777jas"
@@ -435,24 +473,30 @@
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path
           fill="currentColor"
-          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
+          d="M21.8 3.2 2.9 10.5c-1.3.3-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.5.1.9.7.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9 6.9c.5-.3.9-.1.5.2l-1.8 1.7-.8 2.9Z"
         />
       </svg>
     </span>
 
   </a>
 
+
+  <!-- COUNTDOWN -->
+
   <section class="timer-box">
 
     <div class="timer-label">
-      Session Timer
+      Available Time Now 
     </div>
 
     <div id="countdown">
-      06:00:00
+      8:00:00
     </div>
 
   </section>
+
+
+  <!-- REVIEWS -->
 
   <h2 class="section-heading">
     ⭐ Customer Reviews
@@ -477,6 +521,9 @@
     </div>
 
   </div>
+
+
+  <!-- VIDEO REVIEWS -->
 
   <h2 class="section-heading">
     🎥 Video Reviews
@@ -528,6 +575,9 @@
 
   </div>
 
+
+  <!-- PROFILE -->
+
   <a
     href="https://t.me/pb777jas"
     class="profile-button"
@@ -537,11 +587,15 @@
     Contact: @goodarts1185
   </a>
 
+
   <img
     src="kingphoto.jpg"
     alt="Parvinder Singh"
     class="bottom-photo"
   >
+
+
+  <!-- TERMS -->
 
   <div class="terms">
 
@@ -557,16 +611,20 @@
 
   </div>
 
+
   <footer>
     © Since 2019 Punjabi King Parvinder Singh
   </footer>
 
 </main>
 
+
+<!-- COUNTDOWN SCRIPT -->
+
 <script>
 
-  const SIX_HOURS =
-    6 * 60 * 60 * 1000;
+  const TEN_HOURS =
+    10 * 60 * 60 * 1000;
 
   let savedEnd =
     localStorage.getItem("sessionEnd");
@@ -574,7 +632,7 @@
   let endTime =
     savedEnd
       ? Number(savedEnd)
-      : Date.now() + SIX_HOURS;
+      : Date.now() + TEN_HOURS;
 
   if (!savedEnd) {
 
@@ -593,7 +651,7 @@
     if (remaining <= 0) {
 
       endTime =
-        Date.now() + SIX_HOURS;
+        Date.now() + TEN_HOURS;
 
       localStorage.setItem(
         "sessionEnd",
@@ -601,7 +659,7 @@
       );
 
       remaining =
-        SIX_HOURS;
+        TEN_HOURS;
 
     }
 
@@ -638,6 +696,9 @@
     1000
   );
 
+
+  /* ONLY ONE VIDEO PLAYS AT A TIME */
+
   const videos =
     document.querySelectorAll(
       ".video-box video"
@@ -669,4 +730,4 @@
 </script>
 
 </body>
-  </html>
+</html>
