@@ -83,6 +83,11 @@
       box-shadow:
         0 0 18px rgba(42,194,218,.35),
         0 0 35px rgba(42,194,218,.12);
+
+      /* PHOTO PROTECTION */
+      -webkit-user-drag: none;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .brand-title {
@@ -265,6 +270,12 @@
       object-fit: contain;
       display: block;
       border-radius: 6px;
+
+      /* PHOTO PROTECTION */
+      -webkit-user-drag: none;
+      user-select: none;
+      -webkit-user-select: none;
+      pointer-events: none;
     }
 
     .videos {
@@ -288,6 +299,11 @@
       object-fit: contain;
       background: #000;
       border-radius: 7px;
+
+      /* VIDEO PROTECTION */
+      -webkit-user-drag: none;
+      user-select: none;
+      -webkit-user-select: none;
     }
 
     .profile-button {
@@ -364,6 +380,7 @@
       src="parvinder.jpg"
       alt="Parvinder Singh"
       class="top-photo"
+      draggable="false"
     >
 
     <div class="brand-title">
@@ -404,7 +421,7 @@
       <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path
           fill="currentColor"
-          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9 6.9c.5-.3.9-.1.5.2l-1.8 1.7-.8-2.9Z"
+          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9 6.9c.5-.3.9-.1.5.2l-1.8 1.7-.8 2.9Z"
         />
       </svg>
     </span>
@@ -505,19 +522,19 @@
   <div class="reviews">
 
     <div class="review-box">
-      <img src="review1.jpg" alt="Customer Review 1">
+      <img src="review1.jpg" alt="Customer Review 1" draggable="false">
     </div>
 
     <div class="review-box">
-      <img src="review2.jpg" alt="Customer Review 2">
+      <img src="review2.jpg" alt="Customer Review 2" draggable="false">
     </div>
 
     <div class="review-box">
-      <img src="review3.jpg" alt="Customer Review 3">
+      <img src="review3.jpg" alt="Customer Review 3" draggable="false">
     </div>
 
     <div class="review-box">
-      <img src="review4.jpg" alt="Customer Review 4">
+      <img src="review4.jpg" alt="Customer Review 4" draggable="false">
     </div>
 
   </div>
@@ -532,42 +549,42 @@
   <div class="videos">
 
     <div class="video-box">
-      <video controls playsinline preload="metadata">
+      <video controls controlsList="nodownload noplaybackrate" disablePictureInPicture playsinline preload="metadata">
         <source src="video1.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls playsinline preload="metadata">
+      <video controls controlsList="nodownload noplaybackrate" disablePictureInPicture playsinline preload="metadata">
         <source src="video2.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls playsinline preload="metadata">
+      <video controls controlsList="nodownload noplaybackrate" disablePictureInPicture playsinline preload="metadata">
         <source src="video3.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls playsinline preload="metadata">
+      <video controls controlsList="nodownload noplaybackrate" disablePictureInPicture playsinline preload="metadata">
         <source src="video4.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls playsinline preload="metadata">
+      <video controls controlsList="nodownload noplaybackrate" disablePictureInPicture playsinline preload="metadata">
         <source src="video5.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
     </div>
 
     <div class="video-box">
-      <video controls playsinline preload="metadata">
+      <video controls controlsList="nodownload noplaybackrate" disablePictureInPicture playsinline preload="metadata">
         <source src="video6.mp4" type="video/mp4">
         Your browser does not support video.
       </video>
@@ -592,6 +609,7 @@
     src="kingphoto.jpg"
     alt="Parvinder Singh"
     class="bottom-photo"
+    draggable="false"
   >
 
 
@@ -727,7 +745,66 @@
     }
   );
 
+
+  /* PROTECT PHOTOS & VIDEOS FROM RIGHT-CLICK / SAVE */
+
+  document.addEventListener(
+    "contextmenu",
+    function(event) {
+
+      if (
+        event.target.tagName === "IMG" ||
+        event.target.tagName === "VIDEO" ||
+        event.target.closest(".video-box") ||
+        event.target.closest(".review-box")
+      ) {
+        event.preventDefault();
+      }
+
+    }
+  );
+
+
+  /* PREVENT DRAGGING PHOTOS & VIDEOS */
+
+  document.addEventListener(
+    "dragstart",
+    function(event) {
+
+      if (
+        event.target.tagName === "IMG" ||
+        event.target.tagName === "VIDEO"
+      ) {
+        event.preventDefault();
+      }
+
+    }
+  );
+
+
+  /* PREVENT LONG-PRESS SAVE MENU ON IMAGES */
+
+  document.querySelectorAll("img").forEach(
+    function(img) {
+
+      img.addEventListener(
+        "contextmenu",
+        function(event) {
+          event.preventDefault();
+        }
+      );
+
+      img.addEventListener(
+        "dragstart",
+        function(event) {
+          event.preventDefault();
+        }
+      );
+
+    }
+  );
+
 </script>
 
 </body>
-</html>
+  </html>
