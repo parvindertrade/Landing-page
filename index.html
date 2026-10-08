@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>King — Parvinder Singh</title>
+  <title>Punjabi King — Parvinder Singh</title>
 
   <style>
     * {
@@ -19,60 +19,32 @@
 
     body {
       background:
-        radial-gradient(
-          circle at 50% 0%,
-          #063f48 0%,
-          #032a31 30%,
-          #02181d 65%,
-          #010b0e 100%
-        );
-
-      color: #ffffff;
+        radial-gradient(circle at 50% 0%, #063f48 0%, #032a31 30%, #02181d 65%, #010b0e 100%);
+      color: #fff;
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.5;
       overflow-x: hidden;
     }
-
-    /* =========================
-       SOFT TELEGRAM THEME
-    ========================== */
 
     body::before {
       content: "";
       position: fixed;
       inset: 0;
       pointer-events: none;
-
       background:
-        radial-gradient(
-          circle at 10% 20%,
-          rgba(42, 194, 218, .12),
-          transparent 25%
-        ),
-        radial-gradient(
-          circle at 90% 70%,
-          rgba(42, 194, 218, .10),
-          transparent 28%
-        );
-
+        radial-gradient(circle at 10% 20%, rgba(42,194,218,.12), transparent 25%),
+        radial-gradient(circle at 90% 70%, rgba(42,194,218,.10), transparent 28%);
       z-index: 0;
     }
 
     .page {
       position: relative;
       z-index: 2;
-
       width: 100%;
       max-width: 430px;
-
       margin: auto;
-
       padding: 18px 14px 35px;
     }
-
-    /* =========================
-       TOP
-    ========================== */
 
     .top {
       text-align: center;
@@ -81,379 +53,237 @@
     .top-photo {
       width: 105px;
       height: 105px;
-
       border-radius: 50%;
-
       object-fit: cover;
-
       border: 3px solid #29b6d1;
-
       margin: 8px auto 12px;
-
       display: block;
-
       box-shadow:
-        0 0 18px rgba(42, 194, 218, .35),
-        0 0 35px rgba(42, 194, 218, .12);
+        0 0 18px rgba(42,194,218,.35),
+        0 0 35px rgba(42,194,218,.12);
+    }
+
+    /* Punjabi King + Crown */
+    .brand-title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      margin-bottom: 3px;
     }
 
     .crown {
       font-size: 28px;
+      line-height: 1;
     }
 
     .title {
       color: #35d6ee;
-
       font-size: 30px;
-
       font-weight: 800;
-
-      text-shadow:
-        0 0 12px rgba(42, 194, 218, .45);
+      text-shadow: 0 0 12px rgba(42,194,218,.45);
+      line-height: 1.1;
     }
 
     .subtitle {
       color: #e6fbff;
-
       font-size: 16px;
-
       font-weight: 600;
-
       margin: 3px 0 16px;
     }
 
-    /* =========================
-       TELEGRAM BUTTON
-    ========================== */
-
     .telegram-button {
       width: 100%;
-
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
-
       gap: 8px;
-
       padding: 14px 16px;
-
       margin: 14px 0;
 
       background:
-        linear-gradient(
-          135deg,
-          #159fba,
-          #27b9d3,
-          #159fba
-        );
+        linear-gradient(135deg, #159fba, #27b9d3, #159fba);
 
-      color: #ffffff;
-
+      color: #fff;
       text-decoration: none;
-
       border: 1px solid #55e4f5;
-
       border-radius: 12px;
-
       font-size: 17px;
-
       font-weight: 700;
 
       box-shadow:
-        0 6px 20px rgba(20, 185, 211, .30),
+        0 6px 20px rgba(20,185,211,.30),
         inset 0 1px 0 rgba(255,255,255,.25);
 
-      animation:
-        telegramFloat 1.8s ease-in-out infinite;
+      animation: telegramFloat 1.8s ease-in-out infinite;
     }
 
-    /* हल्का ऊपर-नीचे movement */
-
     @keyframes telegramFloat {
-
-      0%,
-      100% {
+      0%, 100% {
         transform: translateY(0);
       }
 
       50% {
         transform: translateY(-5px);
       }
-
     }
 
     .telegram-button:active {
       transform: scale(.97);
     }
 
-    /* =========================
-       TELEGRAM SIDE ICONS
-    ========================== */
-
     .telegram-side-icon {
       width: 25px;
       height: 25px;
-
       display: flex;
-
       align-items: center;
       justify-content: center;
-
       flex-shrink: 0;
 
-      background:
-        rgba(255,255,255,.15);
-
+      background: rgba(255,255,255,.15);
       border-radius: 50%;
 
-      box-shadow:
-        0 0 10px rgba(255,255,255,.15);
+      box-shadow: 0 0 10px rgba(255,255,255,.15);
     }
 
     .telegram-side-icon svg {
       width: 17px;
       height: 17px;
-
       display: block;
     }
 
     .telegram-text {
       flex: 1;
-
       text-align: center;
     }
-
-    /* =========================
-       INFO BOX
-    ========================== */
 
     .info-box,
     .timer-box,
     .terms {
-
-      background:
-        rgba(3, 27, 32, .92);
-
-      border:
-        1px solid rgba(42, 194, 218, .28);
-
+      background: rgba(3,27,32,.92);
+      border: 1px solid rgba(42,194,218,.28);
       border-radius: 12px;
-
       padding: 16px;
-
       margin: 15px 0;
-
       text-align: center;
 
-      box-shadow:
-        0 5px 20px rgba(0,0,0,.20);
+      box-shadow: 0 5px 20px rgba(0,0,0,.20);
     }
 
     .info-title {
       color: #36d6ec;
-
       font-size: 20px;
-
       margin-bottom: 8px;
-
-      text-shadow:
-        0 0 9px rgba(42, 194, 218, .3);
+      text-shadow: 0 0 9px rgba(42,194,218,.3);
     }
 
     .info-text {
       color: #d8eef1;
-
       font-size: 14px;
-
       line-height: 1.65;
     }
 
-    /* =========================
-       TIMER
-    ========================== */
-
     .timer-label {
       color: #9ec5cb;
-
       font-size: 13px;
-
       margin-bottom: 4px;
     }
 
     #countdown {
       color: #36d6ec;
-
       font-size: 28px;
-
       font-weight: 800;
-
       letter-spacing: 2px;
-
-      text-shadow:
-        0 0 10px rgba(42, 194, 218, .35);
+      text-shadow: 0 0 10px rgba(42,194,218,.35);
     }
-
-    /* =========================
-       SECTION HEADING
-    ========================== */
 
     .section-heading {
       text-align: center;
-
       color: #36d6ec;
-
       font-size: 21px;
-
       margin: 24px 0 12px;
-
-      text-shadow:
-        0 0 10px rgba(42, 194, 218, .3);
+      text-shadow: 0 0 10px rgba(42,194,218,.3);
     }
-
-    /* =========================
-       REVIEWS
-    ========================== */
 
     .reviews {
       display: grid;
-
       grid-template-columns: 1fr 1fr;
-
       gap: 9px;
     }
 
     .review-box {
       height: 240px;
-
       background: #011216;
-
-      border:
-        1px solid rgba(42, 194, 218, .25);
-
+      border: 1px solid rgba(42,194,218,.25);
       border-radius: 9px;
-
       padding: 4px;
-
       overflow: hidden;
     }
 
     .review-box img {
       width: 100%;
       height: 100%;
-
       object-fit: contain;
-
       display: block;
-
       border-radius: 6px;
     }
 
-    /* =========================
-       VIDEOS
-    ========================== */
-
     .videos {
       display: flex;
-
       flex-direction: column;
-
       gap: 12px;
     }
 
     .video-box {
       background: #011216;
-
-      border:
-        1px solid rgba(42, 194, 218, .25);
-
+      border: 1px solid rgba(42,194,218,.25);
       border-radius: 10px;
-
       padding: 5px;
-
       overflow: hidden;
     }
 
     .video-box video {
       width: 100%;
-
       height: 190px;
-
       display: block;
-
       object-fit: contain;
-
       background: #000;
-
       border-radius: 7px;
     }
 
-    /* =========================
-       PROFILE BUTTON
-    ========================== */
-
     .profile-button {
       width: 100%;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       padding: 14px;
-
       margin: 20px 0 15px;
 
       border-radius: 10px;
-
       color: #fff;
-
       text-decoration: none;
-
       font-size: 16px;
-
       font-weight: 700;
 
-      background:
-        rgba(8, 67, 76, .9);
-
-      border:
-        1px solid rgba(42, 194, 218, .35);
+      background: rgba(8,67,76,.9);
+      border: 1px solid rgba(42,194,218,.35);
     }
-
-    /* =========================
-       BOTTOM PHOTO
-    ========================== */
 
     .bottom-photo {
       width: 105px;
       height: 105px;
-
       border-radius: 50%;
-
       object-fit: cover;
-
       border: 3px solid #29b6d1;
-
       display: block;
-
       margin: 10px auto 18px;
 
-      box-shadow:
-        0 0 18px rgba(42, 194, 218, .35);
+      box-shadow: 0 0 18px rgba(42,194,218,.35);
     }
-
-    /* =========================
-       TERMS
-    ========================== */
 
     .terms {
       color: #9db8bd;
-
       font-size: 12px;
-
       line-height: 1.6;
     }
 
@@ -461,26 +291,14 @@
       color: #dffaff;
     }
 
-    /* =========================
-       FOOTER
-    ========================== */
-
     footer {
       text-align: center;
-
       color: #638086;
-
       font-size: 12px;
-
       margin-top: 15px;
     }
 
-    /* =========================
-       SMALL PHONES
-    ========================== */
-
     @media (max-width: 360px) {
-
       .page {
         padding-left: 10px;
         padding-right: 10px;
@@ -497,21 +315,13 @@
       .video-box video {
         height: 165px;
       }
-
     }
-
   </style>
 </head>
-
 
 <body>
 
 <main class="page">
-
-
-  <!-- =========================
-       TOP
-  ========================== -->
 
   <div class="top">
 
@@ -521,13 +331,11 @@
       class="top-photo"
     >
 
-    <div class="crown">
-      👑
+    <!-- Punjabi King -->
+    <div class="brand-title">
+      <span class="crown">👑</span>
+      <h1 class="title">Punjabi King</h1>
     </div>
-
-    <h1 class="title">
-      King
-    </h1>
 
     <p class="subtitle">
       Singh Is King — Parvinder Singh
@@ -536,9 +344,7 @@
   </div>
 
 
-  <!-- =========================
-       TELEGRAM BUTTON 1
-  ========================== -->
+  <!-- TELEGRAM BUTTON 1 -->
 
   <a
     href="https://t.me/pb777jas"
@@ -547,54 +353,38 @@
     rel="noopener noreferrer"
   >
 
-    <!-- LEFT TELEGRAM LOGO -->
-
     <span class="telegram-side-icon">
-
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-
         <path
           fill="currentColor"
           d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
         />
-
       </svg>
-
     </span>
-
 
     <span class="telegram-text">
       Telegram पर संपर्क करें
     </span>
 
-
-    <!-- RIGHT TELEGRAM LOGO -->
-
     <span class="telegram-side-icon">
-
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-
         <path
           fill="currentColor"
           d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
         />
-
       </svg>
-
     </span>
 
   </a>
 
 
-  <!-- =========================
-       INFORMATION
-  ========================== -->
+  <!-- ABOUT -->
 
   <section class="info-box">
 
@@ -611,9 +401,7 @@
   </section>
 
 
-  <!-- =========================
-       MESSAGE INVITATION
-  ========================== -->
+  <!-- MESSAGE BOX -->
 
   <section class="info-box">
 
@@ -631,9 +419,7 @@
   </section>
 
 
-  <!-- =========================
-       TELEGRAM BUTTON 2
-  ========================== -->
+  <!-- TELEGRAM BUTTON 2 -->
 
   <a
     href="https://t.me/pb777jas"
@@ -642,54 +428,38 @@
     rel="noopener noreferrer"
   >
 
-    <!-- LEFT TELEGRAM LOGO -->
-
     <span class="telegram-side-icon">
-
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-
         <path
           fill="currentColor"
           d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
         />
-
       </svg>
-
     </span>
-
 
     <span class="telegram-text">
       Send Telegram Message
     </span>
 
-
-    <!-- RIGHT TELEGRAM LOGO -->
-
     <span class="telegram-side-icon">
-
       <svg
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
       >
-
         <path
           fill="currentColor"
-          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5.7l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
+          d="M21.8 3.2 2.9 10.5c-1.3.5-1.3 1.3-.2 1.6l4.8 1.5 1.8 5.7c.2.6.1.9.7.9.5 0 .7-.2 1-.5l2.3-2.2 4.8 3.5c.9.5 1.5.3 1.7-.8l3.1-14.6c.3-1.4-.5-2-1.1-1.5ZM8.3 13.2l10.9-6.9c.5-.3.9-.1.5.2l-8.8 8-1.8 1.7-.8-2.9Z"
         />
-
       </svg>
-
     </span>
 
   </a>
 
 
-  <!-- =========================
-       TIMER
-  ========================== -->
+  <!-- TIMER -->
 
   <section class="timer-box">
 
@@ -704,9 +474,7 @@
   </section>
 
 
-  <!-- =========================
-       CUSTOMER REVIEWS
-  ========================== -->
+  <!-- REVIEWS -->
 
   <h2 class="section-heading">
     ⭐ Customer Reviews
@@ -745,9 +513,7 @@
   </div>
 
 
-  <!-- =========================
-       VIDEO REVIEWS
-  ========================== -->
+  <!-- VIDEOS -->
 
   <h2 class="section-heading">
     🎥 Video Reviews
@@ -756,130 +522,69 @@
   <div class="videos">
 
     <div class="video-box">
-
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-
+      <video controls playsinline preload="metadata">
         <source
           src="video1.mp4"
           type="video/mp4"
         >
-
         Your browser does not support video.
-
       </video>
-
     </div>
 
-
     <div class="video-box">
-
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-
+      <video controls playsinline preload="metadata">
         <source
           src="video2.mp4"
           type="video/mp4"
         >
-
         Your browser does not support video.
-
       </video>
-
     </div>
 
-
     <div class="video-box">
-
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-
+      <video controls playsinline preload="metadata">
         <source
           src="video3.mp4"
           type="video/mp4"
         >
-
         Your browser does not support video.
-
       </video>
-
     </div>
 
-
     <div class="video-box">
-
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-
+      <video controls playsinline preload="metadata">
         <source
           src="video4.mp4"
           type="video/mp4"
         >
-
         Your browser does not support video.
-
       </video>
-
     </div>
 
-
     <div class="video-box">
-
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-
+      <video controls playsinline preload="metadata">
         <source
           src="video5.mp4"
           type="video/mp4"
         >
-
         Your browser does not support video.
-
       </video>
-
     </div>
 
-
     <div class="video-box">
-
-      <video
-        controls
-        playsinline
-        preload="metadata"
-      >
-
+      <video controls playsinline preload="metadata">
         <source
           src="video6.mp4"
           type="video/mp4"
         >
-
         Your browser does not support video.
-
       </video>
-
     </div>
 
   </div>
 
 
-  <!-- =========================
-       PROFILE
-  ========================== -->
+  <!-- PROFILE -->
 
   <a
     href="https://t.me/pb777jas"
@@ -891,9 +596,7 @@
   </a>
 
 
-  <!-- =========================
-       BOTTOM PHOTO
-  ========================== -->
+  <!-- BOTTOM PHOTO -->
 
   <img
     src="kingphoto.jpg"
@@ -902,9 +605,7 @@
   >
 
 
-  <!-- =========================
-       TERMS
-  ========================== -->
+  <!-- TERMS -->
 
   <div class="terms">
 
@@ -921,12 +622,8 @@
   </div>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
   <footer>
-    © Since 2019 King Parvinder Singh
+    © Since 2019 Punjabi King Parvinder Singh
   </footer>
 
 </main>
@@ -936,7 +633,6 @@
 
   /* =========================
      6 HOUR TIMER
-     Saves timer in browser
   ========================== */
 
   const SIX_HOURS =
@@ -949,7 +645,6 @@
     savedEnd
       ? Number(savedEnd)
       : Date.now() + SIX_HOURS;
-
 
   if (!savedEnd) {
 
@@ -965,7 +660,6 @@
 
     let remaining =
       endTime - Date.now();
-
 
     if (remaining <= 0) {
 
@@ -984,22 +678,17 @@
 
 
     const totalSeconds =
-      Math.floor(
-        remaining / 1000
-      );
-
+      Math.floor(remaining / 1000);
 
     const hours =
       Math.floor(
         totalSeconds / 3600
       );
 
-
     const minutes =
       Math.floor(
         (totalSeconds % 3600) / 60
       );
-
 
     const seconds =
       totalSeconds % 60;
@@ -1050,7 +739,9 @@
             function(other) {
 
               if (other !== video) {
+
                 other.pause();
+
               }
 
             }
@@ -1065,4 +756,4 @@
 </script>
 
 </body>
-  </html>
+</html>
