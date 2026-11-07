@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="hi">
 <head>
@@ -6,6 +7,26 @@
 <meta name="theme-color" content="#160b25">
 
 <title>Punjabi King — Gurpreet Singh</title>
+
+<!-- META PIXEL: TELEGRAM LEADS PIXEL -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
+fbq('init', '1625585369305505');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1625585369305505&ev=PageView&noscript=1"/>
+</noscript>
+<!-- END META PIXEL -->
 
 <style>
 * {
@@ -106,8 +127,6 @@ body::before {
   margin: 3px 0 20px;
 }
 
-/* SINGLE TELEGRAM BUTTON */
-
 .telegram-button {
   width: 100%;
   min-height: 66px;
@@ -140,7 +159,6 @@ body::before {
     box-shadow: 0 0 14px rgba(255,164,54,.35),
                 0 8px 24px rgba(0,0,0,.32);
   }
-
   50% {
     box-shadow: 0 0 27px rgba(255,194,79,.72),
                 0 8px 28px rgba(0,0,0,.36);
@@ -162,8 +180,6 @@ body::before {
   text-align: center;
   white-space: nowrap;
 }
-
-/* CONTENT BOXES */
 
 .info-box,
 .timer-box,
@@ -190,8 +206,6 @@ body::before {
   font-size: 14px;
   line-height: 1.65;
 }
-
-/* COUNTDOWN */
 
 .timer-box {
   padding: 18px 14px;
@@ -291,8 +305,6 @@ footer {
 
 <main class="page">
 
-  <!-- TOP PHOTO -->
-
   <div class="top">
 
     <img
@@ -313,107 +325,69 @@ footer {
 
   </div>
 
-  <!-- ONLY ONE TELEGRAM BUTTON -->
+  <!-- TELEGRAM BUTTON -->
 
   <a
     href="https://linktw.in/tyorxy"
     class="telegram-button"
+    id="telegram-button"
     target="_blank"
     rel="noopener noreferrer"
     aria-label="Send Message Now on Telegram"
   >
 
-    <!-- LEFT TELEGRAM LOGO -->
-
     <svg class="telegram-logo"
          viewBox="0 0 240 240"
          aria-label="Telegram">
-
       <circle cx="120" cy="120" r="120" fill="#229ED9"/>
-
       <path fill="#fff"
         d="M48.3 116.1 183.9 63.8c6.3-2.3 11.8 1.5 9.8 11l-23.1 108.8c-1.7 7.7-6.3 9.6-12.8 6l-35.4-26.1-17.1 16.5c-1.9 1.9-3.5 3.5-7.2 3.5l2.5-36.1 65.7-59.4c2.9-2.5-.6-3.9-4.4-1.4l-81.2 51.1-35-10.9c-7.6-2.4-7.8-7.6 1.6-11.2z"/>
-
     </svg>
 
     <span class="telegram-button-text">
       Send Message Now
     </span>
 
-    <!-- RIGHT TELEGRAM LOGO -->
-
     <svg class="telegram-logo"
          viewBox="0 0 240 240"
          aria-label="Telegram">
-
       <circle cx="120" cy="120" r="120" fill="#229ED9"/>
-
       <path fill="#fff"
         d="M48.3 116.1 183.9 63.8c6.3-2.3 11.8 1.5 9.8 11l-23.1 108.8c-1.7 7.7-6.3 9.6-12.8 6l-35.4-26.1-17.1 16.5c-1.9 1.9-3.5 3.5-7.2 3.5l2.5-36.1 65.7-59.4c2.9-2.5-.6-3.9-4.4-1.4l-81.2 51.1-35-10.9c-7.6-2.4-7.8-7.6 1.6-11.2z"/>
-
     </svg>
 
   </a>
 
-  <!-- ABOUT -->
-
   <section class="info-box">
-
-    <h2 class="info-title">
-      📝 Important Note 📝
-    </h2>
-
+    <h2 class="info-title">📝 Important Note 📝</h2>
     <p class="info-text">
       किसी भी जानकारी के लिए Telegram पर संपर्क करें।🤝
     </p>
-
   </section>
 
-  <!-- MESSAGE -->
-
   <section class="info-box">
-
-    <h2 class="info-title">
-      💬 एक बार Message करके देखिए
-    </h2>
-
+    <h2 class="info-title">💬 एक बार Message करके देखिए</h2>
     <p class="info-text">
       अगर आप यहाँ तक आ ही गए हैं,
       तो आगे Telegram पर भी एक Message कर दें।
       बात करने पर ही सामने वाले के बारे में पता चलता है।
       हर एक इंसान एक जैसा नहीं होता।
     </p>
-
   </section>
-
-  <!-- COUNTDOWN -->
 
   <section class="timer-box">
-
-    <div class="timer-label">
-      Available Time Remaining
-    </div>
-
-    <div id="countdown">
-      10:00:00
-    </div>
-
+    <div class="timer-label">Available Time Remaining</div>
+    <div id="countdown">10:00:00</div>
   </section>
-
-  <!-- CONTACT -->
 
   <p class="contact-label">
     Telegram Contact: @goodarts1185
   </p>
 
-  <!-- TERMS -->
-
-<div class="terms">
-  <strong>इस दिवाली आपकी ज़िंदगी खुशियों से भर जाएगी। 🎆🪔</strong>
-  <br>
-  मेरे साथ जुड़ें और इस दिवाली को यादगार बनाएँ। ❤️
-</div>
-
+  <div class="terms">
+    <strong>इस दिवाली आपकी ज़िंदगी खुशियों से भर जाएगी। 🎆🪔</strong>
+    <br>
+    मेरे साथ जुड़ें और इस दिवाली को यादगार बनाएँ। ❤️
   </div>
 
   <footer>
@@ -422,9 +396,19 @@ footer {
 
 </main>
 
-<!-- COUNTDOWN + DIWALI FIREWORKS -->
-
 <script>
+
+/* TELEGRAM LEAD TRACKING */
+
+document.getElementById("telegram-button").addEventListener("click", function() {
+
+  if (typeof fbq === "function") {
+    fbq('trackCustom', 'TelegramClick');
+    fbq('track', 'Contact');
+  }
+
+});
+
 
 /* 10 HOUR COUNTDOWN */
 
@@ -445,20 +429,14 @@ function updateCountdown() {
   let remaining = endTime - Date.now();
 
   if (remaining <= 0) {
-
     endTime = Date.now() + TEN_HOURS;
-
     localStorage.setItem("sessionEnd", endTime);
-
     remaining = TEN_HOURS;
   }
 
   const totalSeconds = Math.floor(remaining / 1000);
-
   const hours = Math.floor(totalSeconds / 3600);
-
   const minutes = Math.floor((totalSeconds % 3600) / 60);
-
   const seconds = totalSeconds % 60;
 
   document.getElementById("countdown").textContent =
@@ -468,7 +446,6 @@ function updateCountdown() {
 }
 
 updateCountdown();
-
 setInterval(updateCountdown, 1000);
 
 
@@ -477,7 +454,6 @@ setInterval(updateCountdown, 1000);
 (() => {
 
   const canvas = document.getElementById("diwali-canvas");
-
   const ctx = canvas.getContext("2d");
 
   let w = 0;
@@ -498,9 +474,7 @@ setInterval(updateCountdown, 1000);
   ];
 
   function resize() {
-
     dpr = Math.min(window.devicePixelRatio || 1, 2);
-
     w = window.innerWidth;
     h = window.innerHeight;
 
@@ -514,214 +488,124 @@ setInterval(updateCountdown, 1000);
   }
 
   window.addEventListener("resize", resize, { passive: true });
-
   resize();
 
-
-  /* SKY ROCKET */
-
   function launch() {
-
     rockets.push({
-
       x: Math.random() * w,
-
       y: h + 8,
-
       targetY: h * (0.16 + Math.random() * 0.43),
-
       vx: (Math.random() - 0.5) * 1.2,
-
       vy: -(5 + Math.random() * 2),
-
       color: colors[Math.floor(Math.random() * colors.length)]
-
     });
-
   }
 
-
-  /* FIREWORK BURST */
-
   function burst(x, y, color) {
-
     const count = 34 + Math.floor(Math.random() * 22);
 
     for (let i = 0; i < count; i++) {
-
       const angle = Math.random() * Math.PI * 2;
-
       const speed = 1 + Math.random() * 3.2;
 
       sparks.push({
-
         x: x,
         y: y,
-
         vx: Math.cos(angle) * speed,
-
         vy: Math.sin(angle) * speed,
-
         life: 45 + Math.random() * 28,
-
         maxLife: 73,
-
         color: color,
-
         size: 1 + Math.random() * 1.8,
-
         gravity: 0.035 + Math.random() * 0.025
-
       });
-
     }
-
   }
 
-
-  /* GROUND ANAR */
-
   function anar() {
-
     const x = w * (0.12 + Math.random() * 0.76);
 
     fountains.push({
-
       x: x,
-
       y: h - 5,
-
       life: 38 + Math.random() * 25
-
     });
-
   }
-
 
   let frame = 0;
 
   function animate() {
-
     ctx.clearRect(0, 0, w, h);
-
     frame++;
 
-
     if (frame % 72 === 0) launch();
-
     if (frame % 165 === 0) anar();
 
-
-    /* ROCKET ANIMATION */
-
     for (let i = rockets.length - 1; i >= 0; i--) {
-
       const r = rockets[i];
 
       r.x += r.vx;
       r.y += r.vy;
-
       r.vy += 0.045;
 
       ctx.beginPath();
-
       ctx.arc(r.x, r.y, 2, 0, Math.PI * 2);
-
       ctx.fillStyle = r.color;
-
       ctx.shadowBlur = 12;
-
       ctx.shadowColor = r.color;
-
       ctx.fill();
-
       ctx.shadowBlur = 0;
 
       if (r.y <= r.targetY || r.vy >= 0) {
-
         burst(r.x, r.y, r.color);
-
         rockets.splice(i, 1);
-
       }
-
     }
 
-
-    /* SPARKS */
-
     for (let i = sparks.length - 1; i >= 0; i--) {
-
       const p = sparks[i];
 
       p.x += p.vx;
       p.y += p.vy;
-
       p.vy += p.gravity;
-
       p.vx *= 0.985;
-
       p.life--;
 
       ctx.globalAlpha = Math.max(0, p.life / p.maxLife);
-
       ctx.beginPath();
-
       ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
-
       ctx.fillStyle = p.color;
-
       ctx.shadowBlur = 9;
-
       ctx.shadowColor = p.color;
-
       ctx.fill();
 
       if (p.life <= 0) {
         sparks.splice(i, 1);
       }
-
     }
 
     ctx.globalAlpha = 1;
-
     ctx.shadowBlur = 0;
 
-
-    /* ANAR FOUNTAIN */
-
     for (let i = fountains.length - 1; i >= 0; i--) {
-
       const f = fountains[i];
 
       for (let j = 0; j < 5; j++) {
-
         const spread = (Math.random() - 0.5) * 2.2;
 
         sparks.push({
-
           x: f.x,
-
           y: f.y,
-
           vx: spread,
-
           vy: -(2 + Math.random() * 4),
-
           life: 22 + Math.random() * 20,
-
           maxLife: 42,
-
           color: Math.random() > 0.25
             ? "#ffcf68"
             : "#fff3c4",
-
           size: 1 + Math.random() * 1.5,
-
           gravity: 0.07
-
         });
-
       }
 
       f.life--;
@@ -729,13 +613,10 @@ setInterval(updateCountdown, 1000);
       if (f.life <= 0) {
         fountains.splice(i, 1);
       }
-
     }
 
     requestAnimationFrame(animate);
-
   }
-
 
   if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     animate();
