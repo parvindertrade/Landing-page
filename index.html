@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#160b25">
 
 <title>Punjabi King — Gurpreet Singh</title>
 
@@ -14,17 +14,30 @@
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
-  background:
-    radial-gradient(circle at 50% 0%, #063f48 0%, #032a31 30%, #02181d 65%, #010b0e 100%);
+  min-height: 100vh;
+  background: radial-gradient(
+    ellipse at 50% 0%,
+    #49204f 0%,
+    #21112f 38%,
+    #100b20 75%,
+    #080711 100%
+  );
   color: #fff;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
   overflow-x: hidden;
+}
+
+#diwali-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
 }
 
 body::before {
@@ -32,10 +45,10 @@ body::before {
   position: fixed;
   inset: 0;
   pointer-events: none;
+  z-index: 1;
   background:
-    radial-gradient(circle at 10% 20%, rgba(42,194,218,.12), transparent 25%),
-    radial-gradient(circle at 90% 70%, rgba(42,194,218,.10), transparent 28%);
-  z-index: 0;
+    radial-gradient(circle at 12% 22%, rgba(255,174,65,.13), transparent 27%),
+    radial-gradient(circle at 88% 65%, rgba(255,77,146,.12), transparent 30%);
 }
 
 .page {
@@ -56,15 +69,13 @@ body::before {
   height: 105px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid #29b6d1;
+  border: 3px solid #ffc45c;
   display: block;
   margin: 8px auto 12px;
-  box-shadow:
-    0 0 18px rgba(42,194,218,.35),
-    0 0 35px rgba(42,194,218,.12);
+  box-shadow: 0 0 18px rgba(255,174,65,.45),
+              0 0 38px rgba(255,92,143,.2);
   -webkit-user-drag: none;
   user-select: none;
-  -webkit-user-select: none;
 }
 
 .brand-title {
@@ -81,113 +92,120 @@ body::before {
 }
 
 .title {
-  color: #35d6ee;
+  color: #ffd477;
   font-size: 30px;
   font-weight: 800;
-  text-shadow: 0 0 12px rgba(42,194,218,.45);
+  text-shadow: 0 0 12px rgba(255,177,69,.5);
   line-height: 1.1;
 }
 
 .subtitle {
-  color: #e6fbff;
+  color: #fff0d5;
   font-size: 16px;
   font-weight: 600;
-  margin: 3px 0 16px;
+  margin: 3px 0 20px;
 }
+
+/* SINGLE TELEGRAM BUTTON */
 
 .telegram-button {
   width: 100%;
+  min-height: 66px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 8px;
-  padding: 14px 16px;
-  margin: 14px 0;
-  background: linear-gradient(135deg, #159fba, #27b9d3, #159fba);
-  color: #fff;
+  justify-content: center;
+  gap: 13px;
+  padding: 15px 12px;
+  margin: 17px 0 20px;
+  background: linear-gradient(
+    110deg,
+    #f08a25 0%,
+    #ffbd4a 42%,
+    #ff7b35 100%
+  );
+  color: #25112a;
   text-decoration: none;
-  border: 1px solid #55e4f5;
-  border-radius: 12px;
-  font-size: 17px;
-  font-weight: 700;
-  box-shadow:
-    0 6px 20px rgba(20,185,211,.30),
-    inset 0 1px 0 rgba(255,255,255,.25);
-  animation: telegramFloat 1.8s ease-in-out infinite;
+  border: 2px solid #ffe3a1;
+  border-radius: 16px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: .35px;
+  box-shadow: 0 0 18px rgba(255,164,54,.42),
+              0 8px 24px rgba(0,0,0,.32);
+  animation: buttonGlow 2s ease-in-out infinite;
 }
 
-@keyframes telegramFloat {
+@keyframes buttonGlow {
   0%, 100% {
-    transform: translateY(0);
+    box-shadow: 0 0 14px rgba(255,164,54,.35),
+                0 8px 24px rgba(0,0,0,.32);
   }
+
   50% {
-    transform: translateY(-5px);
+    box-shadow: 0 0 27px rgba(255,194,79,.72),
+                0 8px 28px rgba(0,0,0,.36);
   }
 }
 
 .telegram-button:active {
-  transform: scale(.97);
+  transform: scale(.98);
 }
 
-.telegram-side-icon {
-  width: 25px;
-  height: 25px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  background: rgba(255,255,255,.15);
-  border-radius: 50%;
-}
-
-.telegram-side-icon svg {
-  width: 17px;
-  height: 17px;
+.telegram-logo {
+  width: 27px;
+  height: 27px;
+  flex: 0 0 27px;
   display: block;
 }
 
-.telegram-text {
-  flex: 1;
+.telegram-button-text {
   text-align: center;
+  white-space: nowrap;
 }
+
+/* CONTENT BOXES */
 
 .info-box,
 .timer-box,
 .terms {
-  background: rgba(3,27,32,.92);
-  border: 1px solid rgba(42,194,218,.28);
-  border-radius: 12px;
+  background: rgba(24,12,34,.88);
+  border: 1px solid rgba(255,190,91,.34);
+  border-radius: 14px;
   padding: 16px;
   margin: 15px 0;
   text-align: center;
-  box-shadow: 0 5px 20px rgba(0,0,0,.20);
+  box-shadow: 0 5px 20px rgba(0,0,0,.24);
+  backdrop-filter: blur(3px);
 }
 
 .info-title {
-  color: #36d6ec;
+  color: #ffd078;
   font-size: 20px;
   margin-bottom: 8px;
-  text-shadow: 0 0 9px rgba(42,194,218,.3);
+  text-shadow: 0 0 9px rgba(255,174,65,.3);
 }
 
 .info-text {
-  color: #d8eef1;
+  color: #f5e8f4;
   font-size: 14px;
   line-height: 1.65;
 }
 
+/* COUNTDOWN */
+
 .timer-box {
   padding: 18px 14px;
-  background:
-    linear-gradient(145deg, rgba(4,39,45,.98), rgba(1,19,23,.98));
-  border: 1px solid rgba(53,214,238,.38);
-  box-shadow:
-    0 0 20px rgba(42,194,218,.10),
-    inset 0 0 20px rgba(42,194,218,.04);
+  background: linear-gradient(
+    145deg,
+    rgba(53,22,55,.96),
+    rgba(20,12,34,.98)
+  );
+  border-color: rgba(255,193,91,.45);
+  box-shadow: 0 0 20px rgba(255,164,54,.12);
 }
 
 .timer-label {
-  color: #b9eaf0;
+  color: #ffe2b0;
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 8px;
@@ -198,47 +216,36 @@ body::before {
   display: inline-block;
   padding: 8px 18px;
   border-radius: 10px;
-  color: #36d6ec;
+  color: #ffd477;
   font-size: 32px;
   font-weight: 800;
   letter-spacing: 3px;
   line-height: 1.1;
-  text-shadow:
-    0 0 8px rgba(42,194,218,.55),
-    0 0 20px rgba(42,194,218,.20);
-  background: rgba(0,10,13,.45);
-  border: 1px solid rgba(53,214,238,.20);
+  text-shadow: 0 0 8px rgba(255,194,79,.55);
+  background: rgba(10,5,17,.55);
+  border: 1px solid rgba(255,193,91,.25);
 }
 
-.profile-button {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px;
-  margin: 20px 0 15px;
-  border-radius: 10px;
-  color: #fff;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-  background: rgba(8,67,76,.9);
-  border: 1px solid rgba(42,194,218,.35);
+.contact-label {
+  text-align: center;
+  color: #f5d9b5;
+  font-size: 14px;
+  margin: 10px 0 15px;
 }
 
 .terms {
-  color: #9db8bd;
+  color: #c6b5c9;
   font-size: 12px;
   line-height: 1.6;
 }
 
 .terms strong {
-  color: #dffaff;
+  color: #fff0d5;
 }
 
 footer {
   text-align: center;
-  color: #638086;
+  color: #a18aa4;
   font-size: 12px;
   margin-top: 15px;
 }
@@ -257,15 +264,35 @@ footer {
     font-size: 27px;
     letter-spacing: 2px;
   }
+
+  .telegram-button {
+    font-size: 18px;
+    gap: 9px;
+  }
+
+  .telegram-logo {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .telegram-button {
+    animation: none;
+  }
 }
 </style>
 </head>
 
 <body>
 
+<canvas id="diwali-canvas"></canvas>
+
 <main class="page">
 
   <!-- TOP PHOTO -->
+
   <div class="top">
 
     <img
@@ -286,19 +313,50 @@ footer {
 
   </div>
 
-  <!-- TELEGRAM BUTTON 1 -->
+  <!-- ONLY ONE TELEGRAM BUTTON -->
+
   <a
     href="https://linktw.in/tyorxy"
     class="telegram-button"
     target="_blank"
     rel="noopener noreferrer"
+    aria-label="Send Message Now on Telegram"
   >
-    <span class="telegram-side-icon">➤</span>
-    <span class="telegram-text">Telegram पर संपर्क करें</span>
-    <span class="telegram-side-icon">➤</span>
+
+    <!-- LEFT TELEGRAM LOGO -->
+
+    <svg class="telegram-logo"
+         viewBox="0 0 240 240"
+         aria-label="Telegram">
+
+      <circle cx="120" cy="120" r="120" fill="#229ED9"/>
+
+      <path fill="#fff"
+        d="M48.3 116.1 183.9 63.8c6.3-2.3 11.8 1.5 9.8 11l-23.1 108.8c-1.7 7.7-6.3 9.6-12.8 6l-35.4-26.1-17.1 16.5c-1.9 1.9-3.5 3.5-7.2 3.5l2.5-36.1 65.7-59.4c2.9-2.5-.6-3.9-4.4-1.4l-81.2 51.1-35-10.9c-7.6-2.4-7.8-7.6 1.6-11.2z"/>
+
+    </svg>
+
+    <span class="telegram-button-text">
+      Send Message Now
+    </span>
+
+    <!-- RIGHT TELEGRAM LOGO -->
+
+    <svg class="telegram-logo"
+         viewBox="0 0 240 240"
+         aria-label="Telegram">
+
+      <circle cx="120" cy="120" r="120" fill="#229ED9"/>
+
+      <path fill="#fff"
+        d="M48.3 116.1 183.9 63.8c6.3-2.3 11.8 1.5 9.8 11l-23.1 108.8c-1.7 7.7-6.3 9.6-12.8 6l-35.4-26.1-17.1 16.5c-1.9 1.9-3.5 3.5-7.2 3.5l2.5-36.1 65.7-59.4c2.9-2.5-.6-3.9-4.4-1.4l-81.2 51.1-35-10.9c-7.6-2.4-7.8-7.6 1.6-11.2z"/>
+
+    </svg>
+
   </a>
 
   <!-- ABOUT -->
+
   <section class="info-box">
 
     <h2 class="info-title">
@@ -313,6 +371,7 @@ footer {
   </section>
 
   <!-- MESSAGE -->
+
   <section class="info-box">
 
     <h2 class="info-title">
@@ -328,19 +387,8 @@ footer {
 
   </section>
 
-  <!-- TELEGRAM BUTTON 2 -->
-  <a
-    href="https://linktw.in/tyorxy"
-    class="telegram-button"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    <span class="telegram-side-icon">➤</span>
-    <span class="telegram-text">Send Telegram Message</span>
-    <span class="telegram-side-icon">➤</span>
-  </a>
-
   <!-- COUNTDOWN -->
+
   <section class="timer-box">
 
     <div class="timer-label">
@@ -353,26 +401,19 @@ footer {
 
   </section>
 
-  <!-- TELEGRAM PROFILE -->
-  <a
-    href="https://linktw.in/tyorxy"
-    class="profile-button"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Contact: @goodarts1185
-  </a>
+  <!-- CONTACT -->
+
+  <p class="contact-label">
+    Telegram Contact: @goodarts1185
+  </p>
 
   <!-- TERMS -->
-  <div class="terms">
 
-    <strong>Terms &amp; Conditions:</strong>
-
-    <br>
-
-    आगे बढ़ने से पहले उपलब्ध जानकारी और
-    सभी conditions को ध्यान से समझें।
-    किसी भी जानकारी के लिए Telegram संपर्क करें।
+<div class="terms">
+  <strong>इस दिवाली आपकी ज़िंदगी खुशियों से भर जाएगी। 🎆🪔</strong>
+  <br>
+  मेरे साथ जुड़ें और इस दिवाली को यादगार बनाएँ। ❤️
+</div>
 
   </div>
 
@@ -382,8 +423,11 @@ footer {
 
 </main>
 
-<!-- COUNTDOWN SCRIPT -->
+<!-- COUNTDOWN + DIWALI FIREWORKS -->
+
 <script>
+
+/* 10 HOUR COUNTDOWN */
 
 const TEN_HOURS = 10 * 60 * 60 * 1000;
 
@@ -402,6 +446,7 @@ function updateCountdown() {
   let remaining = endTime - Date.now();
 
   if (remaining <= 0) {
+
     endTime = Date.now() + TEN_HOURS;
 
     localStorage.setItem("sessionEnd", endTime);
@@ -426,6 +471,278 @@ function updateCountdown() {
 updateCountdown();
 
 setInterval(updateCountdown, 1000);
+
+
+/* DIWALI FIREWORKS AND ANAR */
+
+(() => {
+
+  const canvas = document.getElementById("diwali-canvas");
+
+  const ctx = canvas.getContext("2d");
+
+  let w = 0;
+  let h = 0;
+  let dpr = 1;
+
+  const rockets = [];
+  const sparks = [];
+  const fountains = [];
+
+  const colors = [
+    "#ffd166",
+    "#ff6b6b",
+    "#7bdff2",
+    "#f7aef8",
+    "#ffffff",
+    "#ff9f1c"
+  ];
+
+  function resize() {
+
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+
+    w = window.innerWidth;
+    h = window.innerHeight;
+
+    canvas.width = Math.floor(w * dpr);
+    canvas.height = Math.floor(h * dpr);
+
+    canvas.style.width = w + "px";
+    canvas.style.height = h + "px";
+
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+
+  window.addEventListener("resize", resize, { passive: true });
+
+  resize();
+
+
+  /* SKY ROCKET */
+
+  function launch() {
+
+    rockets.push({
+
+      x: Math.random() * w,
+
+      y: h + 8,
+
+      targetY: h * (0.16 + Math.random() * 0.43),
+
+      vx: (Math.random() - 0.5) * 1.2,
+
+      vy: -(5 + Math.random() * 2),
+
+      color: colors[Math.floor(Math.random() * colors.length)]
+
+    });
+
+  }
+
+
+  /* FIREWORK BURST */
+
+  function burst(x, y, color) {
+
+    const count = 34 + Math.floor(Math.random() * 22);
+
+    for (let i = 0; i < count; i++) {
+
+      const angle = Math.random() * Math.PI * 2;
+
+      const speed = 1 + Math.random() * 3.2;
+
+      sparks.push({
+
+        x: x,
+        y: y,
+
+        vx: Math.cos(angle) * speed,
+
+        vy: Math.sin(angle) * speed,
+
+        life: 45 + Math.random() * 28,
+
+        maxLife: 73,
+
+        color: color,
+
+        size: 1 + Math.random() * 1.8,
+
+        gravity: 0.035 + Math.random() * 0.025
+
+      });
+
+    }
+
+  }
+
+
+  /* GROUND ANAR */
+
+  function anar() {
+
+    const x = w * (0.12 + Math.random() * 0.76);
+
+    fountains.push({
+
+      x: x,
+
+      y: h - 5,
+
+      life: 38 + Math.random() * 25
+
+    });
+
+  }
+
+
+  let frame = 0;
+
+  function animate() {
+
+    ctx.clearRect(0, 0, w, h);
+
+    frame++;
+
+
+    if (frame % 72 === 0) launch();
+
+    if (frame % 165 === 0) anar();
+
+
+    /* ROCKET ANIMATION */
+
+    for (let i = rockets.length - 1; i >= 0; i--) {
+
+      const r = rockets[i];
+
+      r.x += r.vx;
+      r.y += r.vy;
+
+      r.vy += 0.045;
+
+      ctx.beginPath();
+
+      ctx.arc(r.x, r.y, 2, 0, Math.PI * 2);
+
+      ctx.fillStyle = r.color;
+
+      ctx.shadowBlur = 12;
+
+      ctx.shadowColor = r.color;
+
+      ctx.fill();
+
+      ctx.shadowBlur = 0;
+
+      if (r.y <= r.targetY || r.vy >= 0) {
+
+        burst(r.x, r.y, r.color);
+
+        rockets.splice(i, 1);
+
+      }
+
+    }
+
+
+    /* SPARKS */
+
+    for (let i = sparks.length - 1; i >= 0; i--) {
+
+      const p = sparks[i];
+
+      p.x += p.vx;
+      p.y += p.vy;
+
+      p.vy += p.gravity;
+
+      p.vx *= 0.985;
+
+      p.life--;
+
+      ctx.globalAlpha = Math.max(0, p.life / p.maxLife);
+
+      ctx.beginPath();
+
+      ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+
+      ctx.fillStyle = p.color;
+
+      ctx.shadowBlur = 9;
+
+      ctx.shadowColor = p.color;
+
+      ctx.fill();
+
+      if (p.life <= 0) {
+        sparks.splice(i, 1);
+      }
+
+    }
+
+    ctx.globalAlpha = 1;
+
+    ctx.shadowBlur = 0;
+
+
+    /* ANAR FOUNTAIN */
+
+    for (let i = fountains.length - 1; i >= 0; i--) {
+
+      const f = fountains[i];
+
+      for (let j = 0; j < 5; j++) {
+
+        const spread = (Math.random() - 0.5) * 2.2;
+
+        sparks.push({
+
+          x: f.x,
+
+          y: f.y,
+
+          vx: spread,
+
+          vy: -(2 + Math.random() * 4),
+
+          life: 22 + Math.random() * 20,
+
+          maxLife: 42,
+
+          color: Math.random() > 0.25
+            ? "#ffcf68"
+            : "#fff3c4",
+
+          size: 1 + Math.random() * 1.5,
+
+          gravity: 0.07
+
+        });
+
+      }
+
+      f.life--;
+
+      if (f.life <= 0) {
+        fountains.splice(i, 1);
+      }
+
+    }
+
+    requestAnimationFrame(animate);
+
+  }
+
+
+  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    animate();
+  }
+
+})();
 
 </script>
 
